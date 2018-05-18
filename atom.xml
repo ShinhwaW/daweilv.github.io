@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jshey</title>
+  
+  <subtitle>David的个人博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://jshey.com/"/>
+  <updated>2018-05-18T09:26:13.202Z</updated>
+  <id>http://jshey.com/</id>
+  
+  <author>
+    <name>David</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在 Terminal 中打开 Sublime</title>
+    <link href="http://jshey.com/2017/05/04/%E5%9C%A8-Terminal-%E4%B8%AD%E6%89%93%E5%BC%80-Sublime/"/>
+    <id>http://jshey.com/2017/05/04/在-Terminal-中打开-Sublime/</id>
+    <published>2017-05-04T01:49:08.000Z</published>
+    <updated>2018-05-18T09:26:13.202Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open  ~/.bash_profile</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> sb=<span class="string">"open -a /Applications/Sublime\ Text.app"</span></span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure><p><code>sb.</code> 打开当前文件夹<br><code>sb file</code> 打开当前已存在文件或文件夹</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla
+      
+    
+    </summary>
+    
+    
+      <category term="shell" scheme="http://jshey.com/tags/shell/"/>
+    
+      <category term="sublime" scheme="http://jshey.com/tags/sublime/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript audio 对象常用事件</title>
+    <link href="http://jshey.com/2017/04/25/javascript-audio-%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E4%BA%8B%E4%BB%B6/"/>
+    <id>http://jshey.com/2017/04/25/javascript-audio-对象常用事件/</id>
+    <published>2017-04-25T14:56:19.000Z</published>
+    <updated>2018-05-18T09:56:18.252Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在做一个媒体播放器，集成了图片+音频播放模式和视频播放模式，研究了下 js audio 对象的事件，整理了相关事件及触发顺序。</p><p>音频的初始加载事件顺序：依次触发 <code>onloadstart</code>、<code>onprogress</code>、<code>onsuspend</code>，然后 <code>onprogress</code>、<code>onsuspend</code> 交替触发，直到触发 <code>ondurationchange</code>、<code>onloadedmetadata</code>、<code>onloadeddata</code>、<code>oncanplay</code>、<code>oncanplaythrough</code>，加载完成。</p><p>点击播放后触发事件顺序：<br><code>onplay</code>、<code>onplaying</code>、<code>ontimeupdate</code>，播放控件开始缓冲部分音频文件<code>onprogress</code>，缓冲足够多的音频片段后触发<code>onsuspend</code>，当缓冲即将播放完后又触发<code>onprogress</code>、<code>onsuspend</code>，依次循环直到音频全部缓冲完毕。</p><p>音频播放完毕后触发：<br><code>onpause</code>、<code>onended</code></p><p>暂停播放控件时触发：<br><code>onpause</code></p><p>从暂停恢复播放后触发：<br><code>onplay</code>、<code>onplaying</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近在做一个媒体播放器，集成了图片+音频播放模式和视频播放模式，研究了下 js audio 对象的事件，整理了相关事件及触发顺序。&lt;/p&gt;
+&lt;p&gt;音频的初始加载事件顺序：依次触发 &lt;code&gt;onloadstart&lt;/code&gt;、&lt;code&gt;onprogress&lt;/code
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>javascript 正则表达式的那些坑</title>
+    <link href="http://jshey.com/2016/12/09/javascript-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"/>
+    <id>http://jshey.com/2016/12/09/javascript-正则表达式的那些坑/</id>
+    <published>2016-12-09T02:51:29.000Z</published>
+    <updated>2018-05-18T09:56:39.249Z</updated>
+    
+    <content type="html"><![CDATA[<p>js 正则，匹配多行的<br><code>[.\n]</code> 不能拿来匹配多行， <code>[]</code> 里的 <code>.</code> 会被解析成<code>标点符号</code>，而不是任意字符</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;js 正则，匹配多行的&lt;br&gt;&lt;code&gt;[.\n]&lt;/code&gt; 不能拿来匹配多行， &lt;code&gt;[]&lt;/code&gt; 里的 &lt;code&gt;.&lt;/code&gt; 会被解析成&lt;code&gt;标点符号&lt;/code&gt;，而不是任意字符&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Terminal 设置 path、alias</title>
+    <link href="http://jshey.com/2016/12/09/Terminal-%E8%AE%BE%E7%BD%AE-path%E3%80%81alias/"/>
+    <id>http://jshey.com/2016/12/09/Terminal-设置-path、alias/</id>
+    <published>2016-12-09T02:48:56.000Z</published>
+    <updated>2018-05-18T09:57:47.259Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.bash_profile</span><br></pre></td></tr></table></figure><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias rn=<span class="string">'react-native'</span></span><br><span class="line">alias ro=<span class="string">'react-native run-ios'</span></span><br><span class="line">export PATH=$PATH:/usr/local/mysql/bin</span><br></pre></td></tr></table></figure><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">esc</span><br></pre></td></tr></table></figure><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:wq!</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vi 编辑器命令备忘</title>
+    <link href="http://jshey.com/2016/12/09/vi-%E7%BC%96%E8%BE%91%E5%99%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/"/>
+    <id>http://jshey.com/2016/12/09/vi-编辑器命令备忘/</id>
+    <published>2016-12-09T02:44:09.000Z</published>
+    <updated>2018-05-18T09:58:18.277Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="打开一个文件"><a href="#打开一个文件" class="headerlink" title="打开一个文件"></a>打开一个文件</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">vi</span>  ~/.bash_profile</span><br></pre></td></tr></table></figure><h3 id="跳到行首"><a href="#跳到行首" class="headerlink" title="跳到行首"></a>跳到行首</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure><h3 id="跳到行尾"><a href="#跳到行尾" class="headerlink" title="跳到行尾"></a>跳到行尾</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shift + <span class="number">4</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;打开一个文件&quot;&gt;&lt;a href=&quot;#打开一个文件&quot; class=&quot;headerlink&quot; title=&quot;打开一个文件&quot;&gt;&lt;/a&gt;打开一个文件&lt;/h3&gt;&lt;figure class=&quot;highlight vim&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutte
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>记一次 radio 标签 onblur 异常的分析过程</title>
+    <link href="http://jshey.com/2016/12/09/%E8%AE%B0%E4%B8%80%E6%AC%A1-radio-%E6%A0%87%E7%AD%BE-onblur-%E5%BC%82%E5%B8%B8%E7%9A%84%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B/"/>
+    <id>http://jshey.com/2016/12/09/记一次-radio-标签-onblur-异常的分析过程/</id>
+    <published>2016-12-09T02:30:34.000Z</published>
+    <updated>2018-05-18T09:59:08.834Z</updated>
+    
+    <content type="html"><![CDATA[<p>问题版本：Safari 10.0 (12602.1.50.0.10)</p><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>目标版本浏览器在鼠标点击 radio 的小圆点后再点击其他区域并不会触发 onblur 事件。问题可以重现，在 Chrome 下无此问题。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">onblur</span>=<span class="string">"alert('blur')"</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h2><p>我们先找到了 w3 上关于 blur 事件的定义：<a href="https://www.w3.org/TR/uievents/#event-type-blur" target="_blank" rel="noopener">https://www.w3.org/TR/uievents/#event-type-blur</a></p><blockquote><p>A user agent MUST dispatch this event when an event target loses focus. The focus MUST be taken from the element before the dispatch of this event type. This event type is similar to focusout, but is dispatched after focus is shifted, and does not bubble.</p></blockquote><p>也就是说，onblur 事件未触发是因为该控件在此之前并没有被 focus ，所以我们在点击 radio 控件的时候监听点击事件，在点击的时候主动触发一下设置 focus</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">onblur</span>=<span class="string">"alert('blur')"</span> <span class="attr">onclick</span>=<span class="string">"this.focus()"</span>&gt;</span></span><br></pre></td></tr></table></figure><p>问题解决。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;问题版本：Safari 10.0 (12602.1.50.0.10)&lt;/p&gt;
+&lt;h2 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h2&gt;&lt;p&gt;目标版本浏览器在鼠标点击 rad
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>常用 MySQL 数据库语句</title>
+    <link href="http://jshey.com/2016/12/09/%E5%B8%B8%E7%94%A8-MySQL-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%AD%E5%8F%A5/"/>
+    <id>http://jshey.com/2016/12/09/常用-MySQL-数据库语句/</id>
+    <published>2016-12-09T02:02:51.000Z</published>
+    <updated>2018-05-18T09:59:08.831Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="建表语句"><a href="#建表语句" class="headerlink" title="建表语句"></a>建表语句</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`t_user`</span> (</span><br><span class="line">  <span class="string">`id`</span> <span class="built_in">varchar</span>(<span class="number">30</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'ID'</span>,</span><br><span class="line">  <span class="string">`login`</span> <span class="built_in">varchar</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'账号'</span>,</span><br><span class="line">  <span class="string">`password`</span> <span class="built_in">varchar</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'密码'</span>,</span><br><span class="line">  <span class="string">`nickname`</span> <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'昵称'</span>,</span><br><span class="line">  <span class="string">`email`</span> <span class="built_in">varchar</span>(<span class="number">100</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'邮箱'</span>,</span><br><span class="line">  <span class="string">`phoneCode`</span> <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">DEFAULT</span> <span class="string">'86'</span> <span class="keyword">COMMENT</span> <span class="string">'国际电话区号'</span>,</span><br><span class="line">  <span class="string">`phone`</span> <span class="built_in">varchar</span>(<span class="number">30</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'手机'</span>,</span><br><span class="line">  <span class="string">`create_at`</span> <span class="built_in">varchar</span>(<span class="number">24</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'创建日期'</span>,</span><br><span class="line">  <span class="string">`create_by`</span> <span class="built_in">varchar</span>(<span class="number">30</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'创建者'</span>,</span><br><span class="line">  <span class="string">`update_at`</span> <span class="built_in">varchar</span>(<span class="number">24</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'修改日期'</span>,</span><br><span class="line">  <span class="string">`update_by`</span> <span class="built_in">varchar</span>(<span class="number">30</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'修改者'</span>,</span><br><span class="line">  <span class="string">`delete_at`</span> <span class="built_in">varchar</span>(<span class="number">24</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'删除日期'</span>,</span><br><span class="line">  <span class="string">`delete_by`</span> <span class="built_in">varchar</span>(<span class="number">30</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'删除者'</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>),</span><br><span class="line">  <span class="keyword">UNIQUE</span> <span class="keyword">KEY</span> <span class="string">`login`</span> (<span class="string">`login`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8 <span class="keyword">COMMENT</span>=<span class="string">'用户表’;</span></span><br></pre></td></tr></table></figure><h4 id="增加字段"><a href="#增加字段" class="headerlink" title="增加字段"></a>增加字段</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`t_user`</span></span><br><span class="line"><span class="keyword">ADD</span> <span class="keyword">COLUMN</span> <span class="string">`qq`</span> <span class="built_in">VARCHAR</span>(<span class="number">15</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'QQ'</span>; <span class="comment">-- 增加一个 qq 字段</span></span><br></pre></td></tr></table></figure><h4 id="删除字段"><a href="#删除字段" class="headerlink" title="删除字段"></a>删除字段</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`t_user`</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">COLUMN</span> <span class="string">`email`</span>; <span class="comment">-- 删除一个 email 字段</span></span><br></pre></td></tr></table></figure><h4 id="删除索引"><a href="#删除索引" class="headerlink" title="删除索引"></a>删除索引</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`t_user`</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span> <span class="string">`login`</span>; <span class="comment">-- 删除 login 索引</span></span><br></pre></td></tr></table></figure><h4 id="修改字段"><a href="#修改字段" class="headerlink" title="修改字段"></a>修改字段</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`t_user`</span></span><br><span class="line"><span class="keyword">MODIFY</span> <span class="keyword">COLUMN</span> <span class="string">`nickname`</span> <span class="built_in">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'昵称'</span>; <span class="comment">-- 修改 nickname 字段长度为 varchar(20)</span></span><br></pre></td></tr></table></figure><h4 id="修改字段名称"><a href="#修改字段名称" class="headerlink" title="修改字段名称"></a>修改字段名称</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`t_user`</span></span><br><span class="line"><span class="keyword">CHANGE</span> <span class="keyword">COLUMN</span> <span class="string">`phoneCode`</span> <span class="string">`phone_code`</span> <span class="built_in">VARCHAR</span>(<span class="number">10</span>) <span class="keyword">DEFAULT</span> <span class="string">'86'</span> <span class="keyword">COMMENT</span> <span class="string">'国际电话区号'</span>; <span class="comment">-- 修改 phoneCode 字段为 phone_code</span></span><br></pre></td></tr></table></figure><h4 id="在某个字段后面插入一个字段"><a href="#在某个字段后面插入一个字段" class="headerlink" title="在某个字段后面插入一个字段"></a>在某个字段后面插入一个字段</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`t_user`</span></span><br><span class="line"><span class="keyword">ADD</span> <span class="keyword">COLUMN</span> <span class="string">`wechat`</span> <span class="built_in">VARCHAR</span>(<span class="number">15</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'微信'</span> <span class="keyword">AFTER</span> <span class="string">`phone`</span>; <span class="comment">-- 在 phone 字段后添加一个 wechat 字段</span></span><br></pre></td></tr></table></figure><h4 id="多条语句连起来写-中端用逗号分隔开"><a href="#多条语句连起来写-中端用逗号分隔开" class="headerlink" title="多条语句连起来写,中端用逗号分隔开"></a>多条语句连起来写,中端用逗号分隔开</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="string">`t_user`</span></span><br><span class="line"><span class="keyword">CHANGE</span> <span class="keyword">COLUMN</span> <span class="string">`phoneCode`</span> <span class="string">`phone_code`</span> <span class="built_in">VARCHAR</span>(<span class="number">10</span>) <span class="keyword">DEFAULT</span> <span class="string">'86'</span> <span class="keyword">COMMENT</span> <span class="string">'国际电话区号'</span>, <span class="comment">-- 修改 phoneCode 字段为 phone_code</span></span><br><span class="line"><span class="keyword">ADD</span> <span class="keyword">COLUMN</span> <span class="string">`wechat`</span> <span class="built_in">VARCHAR</span>(<span class="number">15</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'微信'</span> <span class="keyword">AFTER</span> <span class="string">`phone`</span>; <span class="comment">-- 在 phone 字段后添加一个 wechat 字段</span></span><br></pre></td></tr></table></figure><h4 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="string">`t_user`</span>; <span class="comment">-- 删除 t_user 表</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;建表语句&quot;&gt;&lt;a href=&quot;#建表语句&quot; class=&quot;headerlink&quot; title=&quot;建表语句&quot;&gt;&lt;/a&gt;建表语句&lt;/h4&gt;&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MongoDB 在Shell中插入/更新的整数会变成浮点数</title>
+    <link href="http://jshey.com/2016/09/01/MongoDB-%E5%9C%A8Shell%E4%B8%AD%E6%8F%92%E5%85%A5-%E6%9B%B4%E6%96%B0%E7%9A%84%E6%95%B4%E6%95%B0%E4%BC%9A%E5%8F%98%E6%88%90%E6%B5%AE%E7%82%B9%E6%95%B0/"/>
+    <id>http://jshey.com/2016/09/01/MongoDB-在Shell中插入-更新的整数会变成浮点数/</id>
+    <published>2016-09-01T05:55:04.000Z</published>
+    <updated>2018-05-18T09:57:23.783Z</updated>
+    
+    <content type="html"><![CDATA[<p>从 shell 中更新/写入到文档的数字，会变为 float 类型</p><p>引用：“shell 中的数字都被 MongoDB 当作是双精度数。这意味着如果你从数据库中获得的是一个 32 位整数，修改文档后，将文档存回数据库的时候，这个整数也就被换成了浮点数，即便保持这个整数原封不动也会这样的。”</p><p>参考：《MongoDB 权威指南》第一版</p><blockquote><p>db.data.update({‘name’: ‘zero’}, {‘$set’: {‘value’: 0}})<br>db.data.findOne({‘name’: ‘zero})</p></blockquote><pre><code>{&apos;name&apos;: &apos;zero&apos;, &apos;value&apos;: 0.0}  </code></pre><p>db.data.update({‘name’: ‘zero’}, {‘$set’: {‘value’: NumberInt(0)}})</p><p><a href="http://stackoverflow.com/questions/8218484/mongodb-inserts-float-when-trying-to-insert-integer" target="_blank" rel="noopener">http://stackoverflow.com/questions/8218484/mongodb-inserts-float-when-trying-to-insert-integer</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;从 shell 中更新/写入到文档的数字，会变为 float 类型&lt;/p&gt;
+&lt;p&gt;引用：“shell 中的数字都被 MongoDB 当作是双精度数。这意味着如果你从数据库中获得的是一个 32 位整数，修改文档后，将文档存回数据库的时候，这个整数也就被换成了浮点数，即便保持这
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>bash 命令行常用快捷键整理</title>
+    <link href="http://jshey.com/2016/07/19/bash-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/"/>
+    <id>http://jshey.com/2016/07/19/bash-命令行常用快捷键整理/</id>
+    <published>2016-07-18T16:04:37.000Z</published>
+    <updated>2018-05-18T09:55:53.391Z</updated>
+    
+    <content type="html"><![CDATA[<p>生活在 Bash shell 中，熟记以下快捷键，将极大的提高你的命令行操作效率。</p><p><strong>编辑命令</strong></p><p>Ctrl + a ：移到命令行首</p><p>Ctrl + e ：移到命令行尾</p><p>Ctrl + f ：按字符前移（右向）</p><p>Ctrl + b ：按字符后移（左向）</p><p>Alt + f ：按单词前移（右向）</p><p>Alt + b ：按单词后移（左向）</p><p>Ctrl + xx：在命令行首和光标之间移动</p><p>Ctrl + u ：从光标处删除至命令行首</p><p>Ctrl + k ：从光标处删除至命令行尾</p><p>Ctrl + w ：从光标处删除至字首</p><p>Alt + d ：从光标处删除至字尾</p><p>Ctrl + d ：删除光标处的字符</p><p>Ctrl + h ：删除光标前的字符</p><p>Ctrl + y ：粘贴至光标后</p><p>Alt + c ：从光标处更改为首字母大写的单词</p><p>Alt + u ：从光标处更改为全部大写的单词</p><p>Alt + l ：从光标处更改为全部小写的单词</p><p>Ctrl + t ：交换光标处和之前的字符</p><p>Alt + t ：交换光标处和之前的单词</p><p>Alt + Backspace：与 Ctrl + w 类似，分隔符有些差别</p><p>Ctrl + r：逆向搜索命令历史</p><p>Ctrl + g：从历史搜索模式退出</p><p>Ctrl + p：历史中的上一条命令</p><p>Ctrl + n：历史中的下一条命令</p><p>Alt + .：使用上一条命令的最后一个参数</p><h4 id="控制命令"><a href="#控制命令" class="headerlink" title="控制命令"></a>控制命令</h4><p>Ctrl + l：清屏</p><p>Ctrl + o：执行当前命令，并选择上一条命令</p><p>Ctrl + s：阻止屏幕输出</p><p>Ctrl + q：允许屏幕输出</p><p>Ctrl + c：终止命令</p><p>Ctrl + z：挂起命令</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;生活在 Bash shell 中，熟记以下快捷键，将极大的提高你的命令行操作效率。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;编辑命令&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ctrl + a ：移到命令行首&lt;/p&gt;
+&lt;p&gt;Ctrl + e ：移到命令行尾&lt;/p&gt;
+&lt;p&gt;Ctrl + f ：按
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 服务器首次快速配置</title>
+    <link href="http://jshey.com/2016/07/18/Linux-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%A6%96%E6%AC%A1%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE/"/>
+    <id>http://jshey.com/2016/07/18/Linux-服务器首次快速配置/</id>
+    <published>2016-07-18T15:57:03.000Z</published>
+    <updated>2018-05-18T09:57:00.568Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>对应 linux 版本：Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-86-generic x86_64)</p></blockquote><p>拿到新云服务器后的快速配置方案，供参考。</p><h2 id="修改-root-默认密码"><a href="#修改-root-默认密码" class="headerlink" title="修改 root 默认密码"></a>修改 root 默认密码</h2><p>用 root 登录，输入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure><p>提示输入新的密码，重复两次</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter new UNIX password:</span><br><span class="line">Retype new UNIX password:</span><br></pre></td></tr></table></figure><p>看到下面的提示即表示修改成功了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd: password updated successfully</span><br></pre></td></tr></table></figure><h2 id="修改-ssh-默认端口号"><a href="#修改-ssh-默认端口号" class="headerlink" title="修改 ssh 默认端口号"></a>修改 ssh 默认端口号</h2><p>执行命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure><p>将下面的 Port <code>22</code> 改为你想要设置的端口号（如 <code>2333</code>）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Package generated configuration file</span></span><br><span class="line"><span class="comment"># See the sshd_config(5) manpage for details</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># What ports, IPs and protocols we listen for</span></span><br><span class="line">Port 22</span><br><span class="line"><span class="comment"># Use these options to restrict which interfaces/protocols sshd will bind to</span></span><br></pre></td></tr></table></figure><p>保存文件后，执行下面的命令重启 ssh 服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service ssh restart</span><br></pre></td></tr></table></figure><h3 id="验证-root-密码和端口号修改生效"><a href="#验证-root-密码和端口号修改生效" class="headerlink" title="验证 root 密码和端口号修改生效"></a>验证 root 密码和端口号修改生效</h3><p>执行命令退出服务器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure><p>在客户端命令行中执行（其中 example.com 为你的服务器域名或 ip 地址）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -p 2333 root@example.com</span><br></pre></td></tr></table></figure><p>输入刚刚设置的新密码，就能看到欢迎信息了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-86-generic x86_64)</span><br><span class="line"></span><br><span class="line"> * Documentation:  https://help.ubuntu.com/</span><br></pre></td></tr></table></figure><h3 id="ssh-保持连接（解决-Broken-pipe-的问题）"><a href="#ssh-保持连接（解决-Broken-pipe-的问题）" class="headerlink" title="ssh 保持连接（解决 Broken pipe 的问题）"></a>ssh 保持连接（解决 Broken pipe 的问题）</h3><p>有时候我们客户端长时间不操作，再去操作的时候就会半天没反应，等一会后提示 <code>broken pipe</code>，下面的是博主的解决方法。</p><h4 id="客户端设置"><a href="#客户端设置" class="headerlink" title="客户端设置"></a>客户端设置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure><p>在最后添加两个参数</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TCPKeepAlive yes</span><br><span class="line">ServerAliveInterval <span class="number">300</span></span><br></pre></td></tr></table></figure><p>第二个参数表示每过 5 分钟发一个数据包到服务器表示“我还活着”。</p><h4 id="服务器端设置"><a href="#服务器端设置" class="headerlink" title="服务器端设置"></a>服务器端设置</h4><p>如果在客户端修改过 ssh 设置后还遇到 broken pipe 的问题，那么就把服务器端的设置也修改一下吧。执行命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure><p>在最后增加一行</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ClientAliveInterval <span class="number">60</span></span><br><span class="line">ClientAliveCountMax <span class="number">1</span></span><br></pre></td></tr></table></figure><p>作用是让 ssh server 发送“心跳”信号来维持持续连接。</p><h2 id="安装-mysql"><a href="#安装-mysql" class="headerlink" title="安装 mysql"></a>安装 mysql</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server mysql-client</span><br></pre></td></tr></table></figure><p>安装过程中两次输入密码</p><p>安装成功后执行命令，验证安装完成</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql restart</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure><p>输入密码登录，后看到欢迎信息</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Welcome to the MySQL monitor.  Commands <span class="keyword">end</span> <span class="keyword">with</span> ; or \g.</span><br><span class="line">Your MySQL connection id is 42</span><br><span class="line">Server version: 5.5.49-0ubuntu0.14.04.1 (Ubuntu)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type '<span class="keyword">help</span>;' or '\h' for help. <span class="keyword">Type</span> <span class="string">'\c'</span> <span class="keyword">to</span> <span class="keyword">clear</span> the <span class="keyword">current</span> <span class="keyword">input</span> statement.</span><br></pre></td></tr></table></figure><h3 id="mysql-设置外网访问权限"><a href="#mysql-设置外网访问权限" class="headerlink" title="mysql 设置外网访问权限"></a>mysql 设置外网访问权限</h3><p>执行命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/mysql/my.cnf</span><br></pre></td></tr></table></figure><p>找到 <code>bind-address =127.0.0.1</code> 注释掉，使得不再只允许本地访问</p><p>保存后执行命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql restart</span><br></pre></td></tr></table></figure><p>重新登录 mysql</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use mysql;</span><br></pre></td></tr></table></figure><p>查询 host 值：</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select user,host from user;</span><br><span class="line">mysql&gt; update user set host='%' where user='root';</span><br><span class="line">mysql&gt; flush privileges;</span><br></pre></td></tr></table></figure><h3 id="导出导入数据库"><a href="#导出导入数据库" class="headerlink" title="导出导入数据库"></a>导出导入数据库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u root -p database_name &gt; dump.sql</span><br><span class="line">password *****</span><br></pre></td></tr></table></figure><p>提前建好库</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p database_name &lt; dump.sql</span><br><span class="line">password *****</span><br></pre></td></tr></table></figure><h2 id="安装-nodejs"><a href="#安装-nodejs" class="headerlink" title="安装 nodejs"></a>安装 nodejs</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -</span><br></pre></td></tr></table></figure><blockquote><p>如果提示未安装 curl，执行 <code>apt-get install curl</code></p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure><p>好了，到此我们的服务器的快速配置已经完成了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;对应 linux 版本：Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-86-generic x86_64)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;拿到新云服务器后的快速配置方案，供参考。&lt;/p&gt;
+&lt;h2 id=&quot;修改
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mac 键盘按键符号对照，Mac 新手必看</title>
+    <link href="http://jshey.com/2016/07/18/Mac-%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E7%AC%A6%E5%8F%B7%E5%AF%B9%E7%85%A7%EF%BC%8CMac-%E6%96%B0%E6%89%8B%E5%BF%85%E7%9C%8B/"/>
+    <id>http://jshey.com/2016/07/18/Mac-键盘按键符号对照，Mac-新手必看/</id>
+    <published>2016-07-18T15:21:28.000Z</published>
+    <updated>2018-05-18T09:55:10.922Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="先来看看我们最常用的五大修饰键"><a href="#先来看看我们最常用的五大修饰键" class="headerlink" title="先来看看我们最常用的五大修饰键"></a>先来看看我们最常用的五大修饰键</h4><ul><li>⌘ 对应按键 <kbd>Command</kbd> ，这个最好记，因为键盘上就有</li><li>⌥ 对应按键 <kbd>Option</kbd></li><li>⇪ 对应按键 <kbd>Caps Lock</kbd></li><li>⇧ 对应按键 <kbd>Shift</kbd></li><li>⌃ 对应按键 <kbd>Control</kbd></li></ul><blockquote><p>如果你用的是 Windows 标准键盘，请用 Alt 键代替 Option 键，用 Windows 标志键代替 Command 键。</p></blockquote><h4 id="按键符号对照表"><a href="#按键符号对照表" class="headerlink" title="按键符号对照表"></a>按键符号对照表</h4><table><thead><tr><th>修饰键</th><th>符号</th></tr></thead><tbody><tr><td>Apple symbol</td><td></td></tr><tr><td>Command</td><td>⌘</td></tr><tr><td>Option (Alt, Alternative)</td><td>⌥</td></tr><tr><td>Caps Lock</td><td>⇪</td></tr><tr><td>Shift</td><td>⇧</td></tr><tr><td>Control</td><td>⌃</td></tr><tr><td>Return</td><td>↩</td></tr><tr><td>Forward Delete</td><td>⌦</td></tr><tr><td>Page Up</td><td>⇞</td></tr><tr><td>Page Down</td><td>⇟</td></tr><tr><td>Top (Home)</td><td>↖</td></tr><tr><td>End</td><td>↘</td></tr><tr><td>Tab Right</td><td>⇥</td></tr><tr><td>Tab Left</td><td>⇤</td></tr><tr><td>Eject</td><td>⏏</td></tr><tr><td>Escape (Esc)</td><td>⎋</td></tr></tbody></table><blockquote><p>试试 ⇧ + ⌥ + K （ <kbd>Shift</kbd> + <kbd>Option</kbd> + <kbd>K</kbd> ）会发生什么：）</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;先来看看我们最常用的五大修饰键&quot;&gt;&lt;a href=&quot;#先来看看我们最常用的五大修饰键&quot; class=&quot;headerlink&quot; title=&quot;先来看看我们最常用的五大修饰键&quot;&gt;&lt;/a&gt;先来看看我们最常用的五大修饰键&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;⌘ 对应按键 &lt;kbd&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
