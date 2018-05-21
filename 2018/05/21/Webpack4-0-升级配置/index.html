@@ -19,7 +19,7 @@
 <p>到笔者发布文章为止，HtmlWebpackPlugin 还不支持添加动态名称的 cacheGroups，无法将未明确指定 name 的 vendors~chunk-a~chunk-b.js 之类的 js 打包进代码中，不过可以看到<a href="https://github.com/jantimon/html-webpack-plugin/pull/945" target="_blank" rel="noopener">相关的代码</a>已经快要出来了。之后就可以实现更精细的代码分割打包了。</p>
 </blockquote>
 <h4 id="plugins"><a href="#plugins" class="headerlink" title="plugins"></a>plugins</h4><p>使用 <a href="https://github.com/webpack-contrib/mini-css-extract-plugin" target="_blank" rel="noopener">mini-css-extract-plugin</a> 替代 <a href="https://github.com/webpack-contrib/extract-text-webpack-plugin" target="_blank" rel="noopener">extract-text-webpack-plugin</a> 抽取 css 到单独文件中，使用 <a href="https://github.com/NMFR/optimize-css-assets-webpack-plugin" target="_blank" rel="noopener">optimize-css-assets-webpack-plugin</a> 对 css 进行压缩处理。</p>
-<h4 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h4><p><a href="https://github.com/daweilv/webpack4-demo" target="_blank" rel="noopener">webpack4-demo</a> 是笔者整理的 webpack4.0 demo</p>
+<h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><p><a href="https://github.com/daweilv/webpack4-demo" target="_blank" rel="noopener">webpack4-demo</a> 是笔者整理的 webpack4.0 demo，详细的 webpack 配置可以在这里找到。</p>
 <ol>
 <li>支持开发/生产模式</li>
 <li>支持开发模式下 HMR</li>
