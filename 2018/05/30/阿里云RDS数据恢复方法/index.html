@@ -2,9 +2,10 @@
 <h4 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h4><p>依次访问菜单“云计算基础服务”&gt;“云数据库 RDS 版” &gt; “实例列表”，选择要恢复的实例 A，点击“管理”，选择“备份恢复”。可以看到 RDS 默认帮我们备份了 1 天前、4 天前、6 天前的数据。</p>
 <h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><p>点击“克隆实例”，选择“按量付费”，还原方式选择按“备份集”，备份集选择一天前的那个备份，规格这里可以选择最低的 “1 核 1GB”，因为我们恢复完后就会释放掉这个实例，用不着选特别好的。然后点击“立即购买”。购买完成后需要等待 5 分钟左右，RDS 创建实例还是挺慢的。</p>
 <h4 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h4><p>新的克隆实例创建好了之后，可以在“云计算基础服务”&gt;“云数据库 RDS 版”&gt;“实例列表”下看到。我们选择新创建的实例，点击“管理”，选择“登录数据库”。输入用户名和密码，点击登录。</p>
-<h4 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4"></a>Step 4</h4><p>登录后就可以看到一天前的数据库的状态，这时候就根据出现的问题，具体问题具体分析，写出恢复的 SQL 语句了。我这次恢复的过程中，发现 1 天前的那个备份也被污染了，于是我又创建了 4 天前的实例，两份数据加一起恢复了现网数据。</p>
+<h4 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4"></a>Step 4</h4><p>登录后就可以看到一天前的数据库的状态，这时候就根据出现的问题，具体问题具体分析，写出恢复的 SQL 语句了。</p>
+<p>我这次恢复的过程中，发现 1 天前的那个备份也被污染了，于是我又创建了 4 天前的实例，两份数据加一起恢复了现网数据。</p>
 <p>给运维同学提个醒，最好不要使用自动化脚本刷现网后台，出现问题危害特别大、破坏性极强、恢复困难..</p>
-</div></article></div></main><footer><div class="paginator"><a href="/2018/05/21/Webpack4-0-升级配置/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
+</div></article></div></main><footer><div class="paginator"><a href="/2018/05/21/Webpack4-0-升级配置/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
 var disqus_identifier = '2018/05/30/阿里云RDS数据恢复方法/';
 var disqus_title = '阿里云RDS数据恢复方法';
 var disqus_url = 'http://dawei.lv/2018/05/30/阿里云RDS数据恢复方法/';
