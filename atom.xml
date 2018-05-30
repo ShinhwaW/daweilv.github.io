@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dawei.lv/"/>
-  <updated>2018-05-21T06:05:38.675Z</updated>
+  <updated>2018-05-30T05:41:30.723Z</updated>
   <id>http://dawei.lv/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿里云RDS数据恢复方法</title>
+    <link href="http://dawei.lv/2018/05/30/%E9%98%BF%E9%87%8C%E4%BA%91RDS%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E6%96%B9%E6%B3%95/"/>
+    <id>http://dawei.lv/2018/05/30/阿里云RDS数据恢复方法/</id>
+    <published>2018-05-30T05:05:05.000Z</published>
+    <updated>2018-05-30T05:41:30.723Z</updated>
+    
+    <content type="html"><![CDATA[<p>某天，公司的数据库被某运维同学用自动化脚本批量改了一批数据，并且改出问题来了，需要恢复修改的数据。由于我司采用了阿里云的云数据库 RDS，于是我登录了公司的阿里云控制台进行了恢复操作，操作过程总结如下，供需要的同学参考。</p><h1 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h1><p>依次访问菜单“云计算基础服务”&gt;“云数据库 RDS 版” &gt; “实例列表”，选择要恢复的实例 A，点击“管理”，选择“备份恢复”。可以看到 RDS 默认帮我们备份了 1 天前、4 天前、6 天前的数据。</p><h1 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h1><p>点击“克隆实例”，选择“按量付费”，还原方式选择按“备份集”，备份集选择一天前的那个备份，规格这里可以选择最低的 “1 核 1GB”，因为我们恢复完后就会释放掉这个实例，用不着选特别好的。然后点击“立即购买”。购买完成后需要等待 5 分钟左右，RDS 创建实例还是挺慢的。</p><h1 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h1><p>新的克隆实例创建好了之后，可以在“云计算基础服务”&gt;“云数据库 RDS 版”&gt;“实例列表”下看到，我们选择新创建的实例，点击“管理”，选择“登录数据库”。输入用户名和密码，点击登录。</p><h1 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4"></a>Step 4</h1><p>登录后就可以看到一天前的数据库的状态，这时候就根据出现的问题，具体问题具体分析，写出恢复的 SQL 语句了。我这次恢复的过程中，发现 1 天前的那个备份也被污染了，于是我又创建了 4 天前的实例，两份数据加一起恢复了现网数据。</p><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;某天，公司的数据库被某运维同学用自动化脚本批量改了一批数据，并且改出问题来了，需要恢复修改的数据。由于我司采用了阿里云的云数据库 RDS，于是我登录了公司的阿里云控制台进行了恢复操作，操作过程总结如下，供需要的同学参考。&lt;/p&gt;
+&lt;h1 id=&quot;Step-1&quot;&gt;&lt;a hre
+      
+    
+    </summary>
+    
+    
+      <category term="阿里云" scheme="http://dawei.lv/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    
+      <category term="RDS" scheme="http://dawei.lv/tags/RDS/"/>
+    
+  </entry>
   
   <entry>
     <title>Webpack4.0 升级配置</title>
@@ -221,7 +247,7 @@
     <link href="http://dawei.lv/2016/07/19/bash-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/"/>
     <id>http://dawei.lv/2016/07/19/bash-命令行常用快捷键整理/</id>
     <published>2016-07-18T16:04:37.000Z</published>
-    <updated>2018-05-19T18:03:24.173Z</updated>
+    <updated>2018-05-21T06:31:59.171Z</updated>
     
     <content type="html"><![CDATA[<h2 id="编辑命令"><a href="#编辑命令" class="headerlink" title="编辑命令"></a>编辑命令</h2><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>Ctrl + a</td><td>移到命令行首</td></tr><tr><td>Ctrl + e</td><td>移到命令行尾</td></tr><tr><td>Ctrl + f</td><td>按字符前移（右向）</td></tr><tr><td>Ctrl + b</td><td>按字符后移（左向）</td></tr><tr><td>Alt + f</td><td>按单词前移（右向）</td></tr><tr><td>Alt + b</td><td>按单词后移（左向）</td></tr><tr><td>Ctrl + xx</td><td>在命令行首和光标之间移动</td></tr><tr><td>Ctrl + u</td><td>从光标处删除至命令行首</td></tr><tr><td>Ctrl + k</td><td>从光标处删除至命令行尾</td></tr><tr><td>Ctrl + w</td><td>从光标处删除至字首</td></tr><tr><td>Alt + d</td><td>从光标处删除至字尾</td></tr><tr><td>Ctrl + d</td><td>删除光标处的字符</td></tr><tr><td>Ctrl + h</td><td>删除光标前的字符</td></tr><tr><td>Ctrl + y</td><td>粘贴至光标后</td></tr><tr><td>Alt + c</td><td>从光标处更改为首字母大写的单词</td></tr><tr><td>Alt + u</td><td>从光标处更改为全部大写的单词</td></tr><tr><td>Alt + l</td><td>从光标处更改为全部小写的单词</td></tr><tr><td>Ctrl + t</td><td>交换光标处和之前的字符</td></tr><tr><td>Alt + t</td><td>交换光标处和之前的单词</td></tr><tr><td>Alt + Backspace</td><td>与 Ctrl + w 类似，分隔符有些差别</td></tr><tr><td>Ctrl + r</td><td>逆向搜索命令历史</td></tr><tr><td>Ctrl + g</td><td>从历史搜索模式退出</td></tr><tr><td>Ctrl + p</td><td>历史中的上一条命令</td></tr><tr><td>Ctrl + n</td><td>历史中的下一条命令</td></tr><tr><td>Alt + .</td><td>使用上一条命令的最后一个参数</td></tr></tbody></table><h2 id="控制命令"><a href="#控制命令" class="headerlink" title="控制命令"></a>控制命令</h2><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>Ctrl + l</td><td>清屏</td></tr><tr><td>Ctrl + o</td><td>执行当前命令，并选择上一条命令</td></tr><tr><td>Ctrl + s</td><td>阻止屏幕输出</td></tr><tr><td>Ctrl + q</td><td>允许屏幕输出</td></tr><tr><td>Ctrl + c</td><td>终止命令</td></tr><tr><td>Ctrl + z</td><td>挂起命令</td></tr></tbody></table>]]></content>
     
