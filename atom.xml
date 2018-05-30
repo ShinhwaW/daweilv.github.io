@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dawei.lv/"/>
-  <updated>2018-05-30T05:41:30.723Z</updated>
+  <updated>2018-05-30T05:49:16.151Z</updated>
   <id>http://dawei.lv/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="http://dawei.lv/2018/05/30/%E9%98%BF%E9%87%8C%E4%BA%91RDS%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E6%96%B9%E6%B3%95/"/>
     <id>http://dawei.lv/2018/05/30/阿里云RDS数据恢复方法/</id>
     <published>2018-05-30T05:05:05.000Z</published>
-    <updated>2018-05-30T05:41:30.723Z</updated>
+    <updated>2018-05-30T05:49:16.151Z</updated>
     
-    <content type="html"><![CDATA[<p>某天，公司的数据库被某运维同学用自动化脚本批量改了一批数据，并且改出问题来了，需要恢复修改的数据。由于我司采用了阿里云的云数据库 RDS，于是我登录了公司的阿里云控制台进行了恢复操作，操作过程总结如下，供需要的同学参考。</p><h1 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h1><p>依次访问菜单“云计算基础服务”&gt;“云数据库 RDS 版” &gt; “实例列表”，选择要恢复的实例 A，点击“管理”，选择“备份恢复”。可以看到 RDS 默认帮我们备份了 1 天前、4 天前、6 天前的数据。</p><h1 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h1><p>点击“克隆实例”，选择“按量付费”，还原方式选择按“备份集”，备份集选择一天前的那个备份，规格这里可以选择最低的 “1 核 1GB”，因为我们恢复完后就会释放掉这个实例，用不着选特别好的。然后点击“立即购买”。购买完成后需要等待 5 分钟左右，RDS 创建实例还是挺慢的。</p><h1 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h1><p>新的克隆实例创建好了之后，可以在“云计算基础服务”&gt;“云数据库 RDS 版”&gt;“实例列表”下看到，我们选择新创建的实例，点击“管理”，选择“登录数据库”。输入用户名和密码，点击登录。</p><h1 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4"></a>Step 4</h1><p>登录后就可以看到一天前的数据库的状态，这时候就根据出现的问题，具体问题具体分析，写出恢复的 SQL 语句了。我这次恢复的过程中，发现 1 天前的那个备份也被污染了，于是我又创建了 4 天前的实例，两份数据加一起恢复了现网数据。</p><hr>]]></content>
+    <content type="html"><![CDATA[<p>某天，公司的数据库被某运维同学用自动化脚本批量改了一批数据，并且改出问题来了，需要恢复修改的数据。由于我司采用了阿里云的云数据库 RDS，于是我登录了公司的阿里云控制台进行了恢复操作，操作过程总结如下，供需要的同学参考。</p><h4 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h4><p>依次访问菜单“云计算基础服务”&gt;“云数据库 RDS 版” &gt; “实例列表”，选择要恢复的实例 A，点击“管理”，选择“备份恢复”。可以看到 RDS 默认帮我们备份了 1 天前、4 天前、6 天前的数据。</p><h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><p>点击“克隆实例”，选择“按量付费”，还原方式选择按“备份集”，备份集选择一天前的那个备份，规格这里可以选择最低的 “1 核 1GB”，因为我们恢复完后就会释放掉这个实例，用不着选特别好的。然后点击“立即购买”。购买完成后需要等待 5 分钟左右，RDS 创建实例还是挺慢的。</p><h4 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h4><p>新的克隆实例创建好了之后，可以在“云计算基础服务”&gt;“云数据库 RDS 版”&gt;“实例列表”下看到，我们选择新创建的实例，点击“管理”，选择“登录数据库”。输入用户名和密码，点击登录。</p><h4 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4"></a>Step 4</h4><p>登录后就可以看到一天前的数据库的状态，这时候就根据出现的问题，具体问题具体分析，写出恢复的 SQL 语句了。我这次恢复的过程中，发现 1 天前的那个备份也被污染了，于是我又创建了 4 天前的实例，两份数据加一起恢复了现网数据。</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;某天，公司的数据库被某运维同学用自动化脚本批量改了一批数据，并且改出问题来了，需要恢复修改的数据。由于我司采用了阿里云的云数据库 RDS，于是我登录了公司的阿里云控制台进行了恢复操作，操作过程总结如下，供需要的同学参考。&lt;/p&gt;
-&lt;h1 id=&quot;Step-1&quot;&gt;&lt;a hre
+&lt;h4 id=&quot;Step-1&quot;&gt;&lt;a hre
       
     
     </summary>
