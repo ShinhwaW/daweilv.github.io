@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dawei.lv/"/>
-  <updated>2018-06-27T06:32:37.425Z</updated>
+  <updated>2018-06-27T08:57:01.506Z</updated>
   <id>http://dawei.lv/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打开 Chrome 的隐藏功能</title>
+    <link href="http://dawei.lv/2018/06/27/%E6%89%93%E5%BC%80-Chrome-%E7%9A%84%E9%9A%90%E8%97%8F%E5%8A%9F%E8%83%BD/"/>
+    <id>http://dawei.lv/2018/06/27/打开-Chrome-的隐藏功能/</id>
+    <published>2018-06-27T08:51:27.000Z</published>
+    <updated>2018-06-27T08:57:01.506Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们有的时候想查看 Video/Audio 之类的原生控件里面有那些 DOM 结构或者 CSS，但是审核元素的时候却看不到里面的结构，那么有没有什么办法看到呢？Chrome 为我们提供了开关 Settings|Preferences -&gt; Elements -&gt; Show user agent shadow DOM，开启之后就能看到隐藏 DOM 了。</p><p><img src="settings1.jpeg" alt=""><br><img src="settings2.jpeg" alt=""><br><img src="showcase.jpeg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我们有的时候想查看 Video/Audio 之类的原生控件里面有那些 DOM 结构或者 CSS，但是审核元素的时候却看不到里面的结构，那么有没有什么办法看到呢？Chrome 为我们提供了开关 Settings|Preferences -&amp;gt; Elements -&amp;gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>好用的 shell 命令合集</title>
@@ -478,30 +499,6 @@
     
     
       <category term="linux" scheme="http://dawei.lv/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac 键盘按键符号对照，Mac 新手必看</title>
-    <link href="http://dawei.lv/2016/07/18/Mac-%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E7%AC%A6%E5%8F%B7%E5%AF%B9%E7%85%A7%EF%BC%8CMac-%E6%96%B0%E6%89%8B%E5%BF%85%E7%9C%8B/"/>
-    <id>http://dawei.lv/2016/07/18/Mac-键盘按键符号对照，Mac-新手必看/</id>
-    <published>2016-07-18T15:21:28.000Z</published>
-    <updated>2018-05-30T06:07:19.755Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="先来看看我们最常用的五大修饰键"><a href="#先来看看我们最常用的五大修饰键" class="headerlink" title="先来看看我们最常用的五大修饰键"></a>先来看看我们最常用的五大修饰键</h4><ul><li>⌘ 对应按键 <kbd>Command</kbd> ，这个最好记，因为键盘上就有</li><li>⌥ 对应按键 <kbd>Option</kbd></li><li>⇪ 对应按键 <kbd>Caps Lock</kbd></li><li>⇧ 对应按键 <kbd>Shift</kbd></li><li>⌃ 对应按键 <kbd>Control</kbd></li></ul><blockquote><p>如果你用的是 Windows 标准键盘，请用 Alt 键代替 Option 键，用 Windows 标志键代替 Command 键。</p></blockquote><h4 id="按键符号对照表"><a href="#按键符号对照表" class="headerlink" title="按键符号对照表"></a>按键符号对照表</h4><table><thead><tr><th>修饰键</th><th>符号</th></tr></thead><tbody><tr><td>Apple symbol</td><td></td></tr><tr><td>Command</td><td>⌘</td></tr><tr><td>Option (Alt, Alternative)</td><td>⌥</td></tr><tr><td>Caps Lock</td><td>⇪</td></tr><tr><td>Shift</td><td>⇧</td></tr><tr><td>Control</td><td>⌃</td></tr><tr><td>Return</td><td>↩</td></tr><tr><td>Forward Delete</td><td>⌦</td></tr><tr><td>Page Up</td><td>⇞</td></tr><tr><td>Page Down</td><td>⇟</td></tr><tr><td>Top (Home)</td><td>↖</td></tr><tr><td>End</td><td>↘</td></tr><tr><td>Tab Right</td><td>⇥</td></tr><tr><td>Tab Left</td><td>⇤</td></tr><tr><td>Eject</td><td>⏏</td></tr><tr><td>Escape (Esc)</td><td>⎋</td></tr></tbody></table><blockquote><p>试试 ⇧ + ⌥ + K （ <kbd>Shift</kbd> + <kbd>Option</kbd> + <kbd>K</kbd> ）会发生什么：）</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;先来看看我们最常用的五大修饰键&quot;&gt;&lt;a href=&quot;#先来看看我们最常用的五大修饰键&quot; class=&quot;headerlink&quot; title=&quot;先来看看我们最常用的五大修饰键&quot;&gt;&lt;/a&gt;先来看看我们最常用的五大修饰键&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;⌘ 对应按键 &lt;kbd&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="mac" scheme="http://dawei.lv/tags/mac/"/>
     
   </entry>
   
