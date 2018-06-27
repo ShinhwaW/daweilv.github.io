@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dawei.lv/"/>
-  <updated>2018-06-27T06:13:29.888Z</updated>
+  <updated>2018-06-27T06:16:44.522Z</updated>
   <id>http://dawei.lv/</id>
   
   <author>
@@ -21,25 +21,15 @@
     <link href="http://dawei.lv/2018/06/27/%E5%A5%BD%E7%94%A8%E7%9A%84-shell-%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/"/>
     <id>http://dawei.lv/2018/06/27/好用的-shell-命令合集/</id>
     <published>2018-06-27T06:08:44.000Z</published>
-    <updated>2018-06-27T06:13:29.888Z</updated>
+    <updated>2018-06-27T06:16:44.522Z</updated>
     
-    <content type="html"><![CDATA[<table><thead><tr><th>解释</th><th>命令</th></tr></thead><tbody><tr><td>设置 proxy</td><td><code>alias proxy=&#39;export all_proxy=socks5://127.0.0.1:1086&#39;</code></td></tr><tr><td>取消 proxy</td><td><code>alias unproxy=&#39;unset all_proxy&#39;</code></td></tr><tr><td>显示当前 ip 地址</td><td>`alias ip=’ifconfig en0</td><td>grep “inet .* netmask”</td><td>cut -d “ “ -f 2’`</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<table><br><thead><br><tr><br><th>解释</th><br><th>命令</th><br></tr><br></thead><br><tbody><br><tr><br><td>设置 proxy</td><br><td><code>alias proxy=&#39;export all_proxy=socks5://127.0.0.1:1086&#39;</code></td><br></tr><br><tr><br><td>取消 proxy</td><br><td><code>alias unproxy=&#39;unset all_proxy&#39;</code></td><br></tr><br><tr><br><td>显示当前 ip 地址</td><br><td><code>alias ip=&#39;ifconfig en0|grep &quot;inet .\* netmask&quot;|cut -d &quot; &quot; -f 2&#39;</code></td><br></tr><br></tbody><br></table>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;解释&lt;/th&gt;
-&lt;th&gt;命令&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;设置 proxy&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;alias proxy=&amp;#39;export all_proxy=socks
+        &lt;table&gt;&lt;br&gt;&lt;thead&gt;&lt;br&gt;&lt;tr&gt;&lt;br&gt;&lt;th&gt;解释&lt;/th&gt;&lt;br&gt;&lt;th&gt;命令&lt;/th&gt;&lt;br&gt;&lt;/tr&gt;&lt;br&gt;&lt;/thead&gt;&lt;br&gt;&lt;tbody&gt;&lt;br&gt;&lt;tr&gt;&lt;br&gt;&lt;td&gt;设置 proxy&lt;/td&gt;&lt;br&gt;&lt;td&gt;&lt;code&gt;alias pro
       
     
     </summary>
