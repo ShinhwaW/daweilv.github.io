@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dawei.lv/"/>
-  <updated>2018-06-27T06:20:06.100Z</updated>
+  <updated>2018-06-27T06:32:37.425Z</updated>
   <id>http://dawei.lv/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://dawei.lv/2018/06/27/%E5%A5%BD%E7%94%A8%E7%9A%84-shell-%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/"/>
     <id>http://dawei.lv/2018/06/27/好用的-shell-命令合集/</id>
     <published>2018-06-27T06:08:44.000Z</published>
-    <updated>2018-06-27T06:20:06.100Z</updated>
+    <updated>2018-06-27T06:32:37.425Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置 proxy</span></span><br><span class="line"><span class="built_in">alias</span> proxy=<span class="string">'export all_proxy=socks5://127.0.0.1:1086'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消 proxy</span></span><br><span class="line"><span class="built_in">alias</span> unproxy=<span class="string">'unset all_proxy'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示当前 ip 地址</span></span><br><span class="line"><span class="built_in">alias</span> ip=<span class="string">'ifconfig en0|grep "inet .\* netmask"|cut -d " " -f 2'</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置 proxy</span></span><br><span class="line"><span class="built_in">alias</span> proxy=<span class="string">'export all_proxy=socks5://127.0.0.1:1086'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消 proxy</span></span><br><span class="line"><span class="built_in">alias</span> unproxy=<span class="string">'unset all_proxy'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示当前 ip 地址</span></span><br><span class="line"><span class="built_in">alias</span> ip=<span class="string">'ifconfig en0|grep "inet .* netmask"|cut -d " " -f 2'</span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
