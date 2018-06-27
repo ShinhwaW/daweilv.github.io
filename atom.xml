@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dawei.lv/"/>
-  <updated>2018-06-27T02:11:29.423Z</updated>
+  <updated>2018-06-27T06:01:20.656Z</updated>
   <id>http://dawei.lv/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>免密码 SSH 登录 Ubuntu</title>
+    <link href="http://dawei.lv/2018/06/27/%E5%85%8D%E5%AF%86%E7%A0%81-SSH-%E7%99%BB%E5%BD%95-Ubuntu/"/>
+    <id>http://dawei.lv/2018/06/27/免密码-SSH-登录-Ubuntu/</id>
+    <published>2018-06-27T05:52:30.000Z</published>
+    <updated>2018-06-27T06:01:20.656Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于工作的原因需要经常 SSH 登录服务器，每次登录服务器都要输入一次密码非常麻烦，还好 SSH 提供了免密码登录（公钥登录），设置好之后每次只需要 <code>ssh user@example.com</code> 回车就登录上去了。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 生成密钥，一路回车</span><br><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 上传公钥到目标服务器上</span><br><span class="line">ssh-copy-id user@example.com</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh user@example.com</span><br><span class="line"># 回车，咻，登录上了！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;由于工作的原因需要经常 SSH 登录服务器，每次登录服务器都要输入一次密码非常麻烦，还好 SSH 提供了免密码登录（公钥登录），设置好之后每次只需要 &lt;code&gt;ssh user@example.com&lt;/code&gt; 回车就登录上去了。&lt;/p&gt;
+&lt;figure class=
+      
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://dawei.lv/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Progressive Web App 开发指南</title>
     <link href="http://dawei.lv/2018/06/27/Progressive-Web-App-%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"/>
     <id>http://dawei.lv/2018/06/27/Progressive-Web-App-开发指南/</id>
     <published>2018-06-27T02:04:41.000Z</published>
-    <updated>2018-06-27T02:11:29.423Z</updated>
+    <updated>2018-06-27T03:51:57.035Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>施工中</p></blockquote><h3 id="坑点"><a href="#坑点" class="headerlink" title="坑点"></a>坑点</h3><ol><li>Service Workers 目前还没有被授予访问 cookie 的能力，via<a href="https://github.com/WICG/cookie-store/issues/37" target="_blank" rel="noopener">https://github.com/WICG/cookie-store/issues/37</a>、<a href="https://github.com/w3c/ServiceWorker/issues/707" target="_blank" rel="noopener">https://github.com/w3c/ServiceWorker/issues/707</a>。所以通过 session 鉴权的页面可能会出现异常。</li></ol>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>施工中</p></blockquote><h3 id="坑点"><a href="#坑点" class="headerlink" title="坑点"></a>坑点</h3><ol><li>Service Workers 目前还没有被授予访问 cookie 的能力，via<a href="https://github.com/WICG/cookie-store/issues/37" target="_blank" rel="noopener">https://github.com/WICG/cookie-store/issues/37</a>、<a href="https://github.com/w3c/ServiceWorker/issues/707" target="_blank" rel="noopener">https://github.com/w3c/ServiceWorker/issues/707</a>、<a href="https://github.com/w3c/ServiceWorker/issues/837" target="_blank" rel="noopener">https://github.com/w3c/ServiceWorker/issues/837</a>。所以通过 session 鉴权的页面可能会出现异常。</li></ol>]]></content>
     
     <summary type="html">
     
