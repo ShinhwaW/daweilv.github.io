@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://dawei.lv/2018/06/27/Service-Workers-PWA-%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/</loc>
+    <loc>http://dawei.lv/2018/06/27/Progressive-Web-App-%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/</loc>
     
-    <lastmod>2018-06-27T02:10:15.927Z</lastmod>
+    <lastmod>2018-06-27T02:10:59.670Z</lastmod>
     
   </url>
   
@@ -86,6 +86,13 @@
   </url>
   
   <url>
+    <loc>http://dawei.lv/2016/07/18/Mac-%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E7%AC%A6%E5%8F%B7%E5%AF%B9%E7%85%A7%EF%BC%8CMac-%E6%96%B0%E6%89%8B%E5%BF%85%E7%9C%8B/</loc>
+    
+    <lastmod>2018-05-30T06:07:19.755Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dawei.lv/2016/09/01/MongoDB-%E5%9C%A8Shell%E4%B8%AD%E6%8F%92%E5%85%A5-%E6%9B%B4%E6%96%B0%E7%9A%84%E6%95%B4%E6%95%B0%E4%BC%9A%E5%8F%98%E6%88%90%E6%B5%AE%E7%82%B9%E6%95%B0/</loc>
     
     <lastmod>2018-05-30T06:07:19.755Z</lastmod>
@@ -93,9 +100,9 @@
   </url>
   
   <url>
-    <loc>http://dawei.lv/2016/07/18/Mac-%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E7%AC%A6%E5%8F%B7%E5%AF%B9%E7%85%A7%EF%BC%8CMac-%E6%96%B0%E6%89%8B%E5%BF%85%E7%9C%8B/</loc>
+    <loc>http://dawei.lv/2016/12/09/javascript-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</loc>
     
-    <lastmod>2018-05-30T06:07:19.755Z</lastmod>
+    <lastmod>2018-05-30T06:07:19.753Z</lastmod>
     
   </url>
   
@@ -115,13 +122,6 @@
   
   <url>
     <loc>http://dawei.lv/2016/12/09/vi-%E7%BC%96%E8%BE%91%E5%99%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</loc>
-    
-    <lastmod>2018-05-30T06:07:19.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dawei.lv/2016/12/09/javascript-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</loc>
     
     <lastmod>2018-05-30T06:07:19.753Z</lastmod>
     

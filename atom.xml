@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dawei.lv/"/>
-  <updated>2018-06-27T02:10:15.927Z</updated>
+  <updated>2018-06-27T02:10:59.670Z</updated>
   <id>http://dawei.lv/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>PWA 开发指南</title>
-    <link href="http://dawei.lv/2018/06/27/Service-Workers-PWA-%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"/>
-    <id>http://dawei.lv/2018/06/27/Service-Workers-PWA-开发指南/</id>
+    <link href="http://dawei.lv/2018/06/27/Progressive-Web-App-%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/"/>
+    <id>http://dawei.lv/2018/06/27/Progressive-Web-App-开发指南/</id>
     <published>2018-06-27T02:04:41.000Z</published>
-    <updated>2018-06-27T02:10:15.927Z</updated>
+    <updated>2018-06-27T02:10:59.670Z</updated>
     
     <content type="html"><![CDATA[<p>坑点</p><ol><li>Service Workers 目前还没有被授予访问 cookie 的能力，via<a href="https://github.com/WICG/cookie-store/issues/37" target="_blank" rel="noopener">https://github.com/WICG/cookie-store/issues/37</a>、<a href="https://github.com/w3c/ServiceWorker/issues/707" target="_blank" rel="noopener">https://github.com/w3c/ServiceWorker/issues/707</a>。所以通过 session 鉴权的页面可能会出现异常。</li></ol>]]></content>
     
