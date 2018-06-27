@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dawei.lv/"/>
-  <updated>2018-06-27T06:11:03.346Z</updated>
+  <updated>2018-06-27T06:13:29.888Z</updated>
   <id>http://dawei.lv/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://dawei.lv/2018/06/27/%E5%A5%BD%E7%94%A8%E7%9A%84-shell-%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/"/>
     <id>http://dawei.lv/2018/06/27/好用的-shell-命令合集/</id>
     <published>2018-06-27T06:08:44.000Z</published>
-    <updated>2018-06-27T06:11:03.346Z</updated>
+    <updated>2018-06-27T06:13:29.888Z</updated>
     
-    <content type="html"><![CDATA[<table><thead><tr><th>解释</th><th>命令</th></tr></thead><tbody><tr><td>设置 proxy</td><td>alias proxy=’export all_proxy=socks5://127.0.0.1:1086’</td></tr><tr><td>取消 proxy</td><td>alias unproxy=’unset all_proxy’</td></tr><tr><td>显示当前 ip 地址</td><td>alias ip=’ifconfig en0\</td><td>grep “inet .* netmask”\</td><td>cut -d “ “ -f 2’</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<table><thead><tr><th>解释</th><th>命令</th></tr></thead><tbody><tr><td>设置 proxy</td><td><code>alias proxy=&#39;export all_proxy=socks5://127.0.0.1:1086&#39;</code></td></tr><tr><td>取消 proxy</td><td><code>alias unproxy=&#39;unset all_proxy&#39;</code></td></tr><tr><td>显示当前 ip 地址</td><td>`alias ip=’ifconfig en0</td><td>grep “inet .* netmask”</td><td>cut -d “ “ -f 2’`</td></tr></tbody></table>]]></content>
     
     <summary type="html">
     
@@ -39,7 +39,7 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;设置 proxy&lt;/td&gt;
-&lt;td&gt;alias proxy=’export all_proxy=socks5://127.0.
+&lt;td&gt;&lt;code&gt;alias proxy=&amp;#39;export all_proxy=socks
       
     
     </summary>

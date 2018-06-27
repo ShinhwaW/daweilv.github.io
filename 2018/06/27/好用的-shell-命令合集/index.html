@@ -8,17 +8,17 @@
 <tbody>
 <tr>
 <td>设置 proxy</td>
-<td>alias proxy=’export all_proxy=socks5://127.0.0.1:1086’</td>
+<td><code>alias proxy=&#39;export all_proxy=socks5://127.0.0.1:1086&#39;</code></td>
 </tr>
 <tr>
 <td>取消 proxy</td>
-<td>alias unproxy=’unset all_proxy’</td>
+<td><code>alias unproxy=&#39;unset all_proxy&#39;</code></td>
 </tr>
 <tr>
 <td>显示当前 ip 地址</td>
-<td>alias ip=’ifconfig en0\</td>
-<td>grep “inet .* netmask”\</td>
-<td>cut -d “ “ -f 2’</td>
+<td>`alias ip=’ifconfig en0</td>
+<td>grep “inet .* netmask”</td>
+<td>cut -d “ “ -f 2’`</td>
 </tr>
 </tbody>
 </table>
