@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dawei.lv/"/>
-  <updated>2018-06-27T09:00:37.576Z</updated>
+  <updated>2018-06-27T09:04:32.476Z</updated>
   <id>http://dawei.lv/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://dawei.lv/2018/06/27/%E6%89%93%E5%BC%80-Chrome-%E7%9A%84%E9%9A%90%E8%97%8F%E5%8A%9F%E8%83%BD/"/>
     <id>http://dawei.lv/2018/06/27/打开-Chrome-的隐藏功能/</id>
     <published>2018-06-27T08:51:27.000Z</published>
-    <updated>2018-06-27T09:00:37.576Z</updated>
+    <updated>2018-06-27T09:04:32.476Z</updated>
     
-    <content type="html"><![CDATA[<p>我们有的时候想查看 Video/Audio 之类的原生控件里面有哪些 DOM 结构或者 CSS 是怎么写的，但是审核元素的时候却看不到里面的结构，那么有没有什么办法看到呢？Chrome 为我们提供了开关 Settings|Preferences -&gt; Elements -&gt; Show user agent shadow DOM，开启之后就能看到隐藏 DOM 了。</p><p><img src="settings1.jpeg" alt=""><br><img src="settings2.jpeg" alt=""><br><img src="showcase.jpeg" alt="DOM 结构"><br><img src="showcase2.jpeg" alt="CSS 样式"></p>]]></content>
+    <content type="html"><![CDATA[<p>我们有的时候想查看 Video/Audio 之类的原生控件里面有哪些 DOM 结构或者 CSS 是怎么写的，但是审核元素的时候却看不到里面的结构，那么有没有什么办法看到呢？Chrome 为我们提供了开关 Settings|Preferences -&gt; Elements -&gt; Show user agent shadow DOM，开启之后就能看到隐藏 DOM 了。</p><p><img src="settings1.jpeg" alt=""><br><img src="settings2.jpeg" alt=""><br><img src="showcase.jpeg" alt="DOM 结构"><br><img src="showcase2.jpeg" alt="CSS 样式">{width:100%}</p>]]></content>
     
     <summary type="html">
     
