@@ -1,9 +1,10 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 前端知识梳理 · David 的个人博客 ๛ก(ｰ̀ωｰ́ก)</title><meta name="description" content="前端知识梳理 - David"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://dawei.lv/atom.xml" title="David 的个人博客 ๛ก(ｰ̀ωｰ́ก)"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/daweilv" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">前端知识梳理</h1><div class="post-info">Jul 3, 2018</div><div class="post-content"><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><ol>
 <li>DOCTYPE 作用<br>DTD（文档类型定义）是一组机器可读的规则，他定义 XML 或 HTML 的特定版本中允许有什么，不允许有什么。而 DOCTYPE 是用来 用来描述使用哪个 DTD。</li>
 <li>标准模式、混杂模式（quirks mode）区别<br>在标准模式中，浏览器根据规范呈现页面；在混杂模式中，页面以一种比较宽松的向后兼容的方式显示。</li>
-<li><p>行内元素有哪些？块级元素有哪些？ 空(void)元素有哪些？</p>
+<li>行内元素与块级元素对比<br>内容上，<br>一般情况下，行内元素只能包含数据和其他行内元素。<br>而块级元素可以包含行内元素和其他块级元素。这种结构上的包含继承区别可以使块级元素创建比行内元素更”大型“的结构。<br>格式上，<br>默认情况下，行内元素不会以新行开始，而块级元素会新起一行。</li>
+<li><p>行内元素列表<br>一个行内元素只占据它对应标签的边框所包含的空间<br>b, big, i, small, tt<br>abbr, acronym, cite, code, dfn, em, kbd, strong, samp, var<br>a, bdo, br, img, map, object, q, script, span, sub, sup<br>button, input, label, select, textarea</p>
 </li>
-<li><p>介绍一下你对浏览器内核的理解？</p>
+<li><p>常见的浏览器内核有哪些？<br>Trident：主要有 IE 浏览器以及多核浏览器<br>Gecko：主要有 Firefox 以及 Firefox 的衍生浏览器<br>WebKit：主要有 Chrome 与 Chrome 的衍生浏览器、Safari 以及多核浏览器<br>Presto：之前主要应用于 Opera，不过现在的 Opera 使用 WebKit 内核<br>EdgeHTML：Microsoft Edge，Trident 的一个分支，移除所有旧版 Internet Explorer 遗留下来的代码，并重写主要的代码以和其他现代浏览器的设计精神互通有无</p>
 </li>
 </ol>
 <h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><ol>
