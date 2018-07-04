@@ -71,6 +71,19 @@
 <li>API 属性和方法前缀<br>webkit (谷歌, Safari, 新版 Opera 浏览器等)<br>moz (火狐浏览器)<br>o (旧版 Opera 浏览器等)<br>ms (IE 浏览器 和 Edge 浏览器)</li>
 </ol>
 </li>
+<li><p>外边距合并(Margin collapsing)<br>块级元素的上外边距和下外边距有时会合并（或折叠）为一个外边距，其大小取其中的最大者，这种行为称为外边距折叠（margin collapsing），有时也翻译为外边距合并。<br>浮动元素和绝对定位元素的外边距不会折叠。</p>
+<p>上外边距和下外边距在没有 content、padding、border 间隔的情况下相遇，就会发生外边距合并，为其中任意一个元素添加 content、padding、border 即可取消叠加。</p>
+<p>发生外边距合并的三种基本情况：<br>相邻元素之间、父元素与其第一个或最后一个子元素之间、空的块级元素。</p>
+<p>注意：</p>
+<ul>
+<li>上述情况的组合会产生更复杂的外边距折叠。</li>
+<li>即使某一外边距为 0，这些规则仍然适用。因此就算父元素的外边距是 0，第一个或最后一个子元素的外边距仍然会“溢出”到父元素的外面。</li>
+<li>如果参与折叠的外边距中包含负值，折叠后的外边距的值为最大的正边距与最小的负边距（即绝对值最大的负边距）的和。</li>
+<li>如果所有参与折叠的外边距都为负，折叠后的外边距的值为最小的负边距的值。这一规则适用于相邻元素和嵌套元素。</li>
+</ul>
+</li>
+<li><p>清除浮动</p>
+</li>
 </ol>
 <h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><ol>
 <li><p>基本类型</p>
@@ -84,7 +97,7 @@
 <li><p>依赖</p>
 </li>
 </ol>
-</div></article></div></main><footer><div class="paginator"><a href="/2018/06/27/打开-Chrome-的隐藏功能/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
+</div></article></div></main><footer><div class="paginator"><a href="/2018/06/27/打开-Chrome-的隐藏功能/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
 var disqus_identifier = '2018/07/03/前端基础拾遗/';
 var disqus_title = '前端基础拾遗';
 var disqus_url = 'http://dawei.lv/2018/07/03/前端基础拾遗/';
