@@ -16,17 +16,16 @@
 </li>
 <li><p>不同 TAB 页下通讯</p>
 <ul>
-<li>BroadcastChannel，Chrome54、Firefox38 Support</li>
-</ul>
+<li><p>BroadcastChannel，Chrome54、Firefox38 Support</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// tab1</span></span><br><span class="line"><span class="keyword">const</span> channel = <span class="keyword">new</span> BroadcastChannel(<span class="string">"channel-name"</span>);</span><br><span class="line">channel.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// tab2</span></span><br><span class="line"><span class="keyword">const</span> channel = <span class="keyword">new</span> BroadcastChannel(<span class="string">"channel-name"</span>);</span><br><span class="line">channel.postMessage(<span class="string">"some message"</span>);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Shared Workers，Chrome、Firefox29 Support</li>
-</ul>
+</li>
+<li><p>Shared Workers，Chrome、Firefox29 Support</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// work.js</span></span><br><span class="line"><span class="keyword">const</span> connections = [];</span><br><span class="line">onconnect = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> port = e.ports[<span class="number">0</span>];</span><br><span class="line">  connections.push(port);</span><br><span class="line">  port.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    connections.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">connection</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (connection !== port) &#123;</span><br><span class="line">        connection.postMessage(e.data);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// tab1</span></span><br><span class="line"><span class="keyword">const</span> worker = <span class="keyword">new</span> SharedWorker(<span class="string">"worker.js"</span>);</span><br><span class="line">worker.port.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e.data);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// tab2</span></span><br><span class="line"><span class="keyword">const</span> worker = <span class="keyword">new</span> SharedWorker(<span class="string">"worker.js"</span>);</span><br><span class="line">worker.port.postMessage(<span class="string">"hello tab1"</span>);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>localStorage</li>
-</ul>
+</li>
+<li><p>localStorage</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// tab1</span></span><br><span class="line"><span class="built_in">window</span>.onstorage = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// tab2</span></span><br><span class="line">localStorage.setItem(<span class="string">"key"</span>, <span class="string">"value"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 </li>
 <li><p>渲染原理</p>
 </li>
@@ -48,15 +47,26 @@
 </li>
 </ol>
 <h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><ol>
-<li><p>页面导入样式时，使用 <code>&lt;link&gt;</code> 和 <code>@import</code> 有什么区别？<br><code>@import</code> 是 CSS 加载样式的方式， <code>&lt;link&gt;</code> 是 HTML 加载样式的方式。页面被加载的时，<code>&lt;link&gt;</code> 会同时被加载，而 <code>@import</code> 引用的 CSS 会等到页面被加载完再加载。</p>
-</li>
 <li><p>盒子模型<br>CSS 中的每个元素都被表示为一个矩形的盒子，每个盒子有四个边：content edge, padding edge, border edge, and margin edge。<br>box-sizing： content-box(默认)，border-box ，padding-box(deprecated)。<br>content-box 下盒子实际宽度不等于 width，不包括 padding 和 border 部分，布局计算不方便。border-box 下盒子实际宽度与 width 相等。</p>
+</li>
+<li><p>外边距合并(Margin collapsing)<br>块级元素的上外边距和下外边距有时会合并（或折叠）为一个外边距，其大小取其中的最大者，这种行为称为外边距折叠（margin collapsing），有时也翻译为外边距合并。<br>浮动元素和绝对定位元素的外边距不会折叠。</p>
+<p>上外边距和下外边距在没有 content、padding、border 间隔的情况下相遇，就会发生外边距合并，为其中一个元素添加 content、padding、border 使得上下外边距分离，即可取消叠加。</p>
+<p>发生外边距合并的三种基本情况：<br>相邻元素之间、父元素与其第一个或最后一个子元素之间、空的块级元素。</p>
+<p>注意：</p>
+<ul>
+<li>上述情况的组合会产生更复杂的外边距折叠。</li>
+<li>即使某一外边距为 0，这些规则仍然适用。因此就算父元素的外边距是 0，第一个或最后一个子元素的外边距仍然会“溢出”到父元素的外面，并且使父元素产生边距效果。</li>
+<li>如果参与折叠的外边距中包含负值，折叠后的外边距的值为最大的正边距与最小的负边距（即绝对值最大的负边距）的和。</li>
+<li>如果所有参与折叠的外边距都为负，折叠后的外边距的值为最小的负边距的值。这一规则适用于相邻元素和嵌套元素。</li>
+</ul>
+</li>
+<li><p>清除浮动</p>
+</li>
+<li><p>BFC</p>
 </li>
 <li><p>动画实现</p>
 </li>
 <li><p>选择符</p>
-</li>
-<li><p>BFC</p>
 </li>
 <li><p>居中</p>
 </li>
@@ -71,18 +81,7 @@
 <li>API 属性和方法前缀<br>webkit (谷歌, Safari, 新版 Opera 浏览器等)<br>moz (火狐浏览器)<br>o (旧版 Opera 浏览器等)<br>ms (IE 浏览器 和 Edge 浏览器)</li>
 </ol>
 </li>
-<li><p>外边距合并(Margin collapsing)<br>块级元素的上外边距和下外边距有时会合并（或折叠）为一个外边距，其大小取其中的最大者，这种行为称为外边距折叠（margin collapsing），有时也翻译为外边距合并。<br>浮动元素和绝对定位元素的外边距不会折叠。</p>
-<p>上外边距和下外边距在没有 content、padding、border 间隔的情况下相遇，就会发生外边距合并，为其中任意一个元素添加 content、padding、border 即可取消叠加。</p>
-<p>发生外边距合并的三种基本情况：<br>相邻元素之间、父元素与其第一个或最后一个子元素之间、空的块级元素。</p>
-<p>注意：</p>
-<ul>
-<li>上述情况的组合会产生更复杂的外边距折叠。</li>
-<li>即使某一外边距为 0，这些规则仍然适用。因此就算父元素的外边距是 0，第一个或最后一个子元素的外边距仍然会“溢出”到父元素的外面。</li>
-<li>如果参与折叠的外边距中包含负值，折叠后的外边距的值为最大的正边距与最小的负边距（即绝对值最大的负边距）的和。</li>
-<li>如果所有参与折叠的外边距都为负，折叠后的外边距的值为最小的负边距的值。这一规则适用于相邻元素和嵌套元素。</li>
-</ul>
-</li>
-<li><p>清除浮动</p>
+<li><p>页面导入样式时，使用 <code>&lt;link&gt;</code> 和 <code>@import</code> 有什么区别？<br><code>@import</code> 是 CSS 加载样式的方式， <code>&lt;link&gt;</code> 是 HTML 加载样式的方式。页面被加载的时，<code>&lt;link&gt;</code> 会同时被加载，而 <code>@import</code> 引用的 CSS 会等到页面被加载完再加载。</p>
 </li>
 </ol>
 <h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><ol>
