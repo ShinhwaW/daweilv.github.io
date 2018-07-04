@@ -12,7 +12,7 @@
 </li>
 <li><p>常见的浏览器内核有哪些？<br>Trident：主要有 IE 浏览器以及多核浏览器<br>Gecko：主要有 Firefox 以及 Firefox 的衍生浏览器<br>WebKit：主要有 Chrome 与 Chrome 的衍生浏览器、Safari 以及多核浏览器<br>Presto：之前主要应用于 Opera，不过现在的 Opera 使用 WebKit 内核<br>EdgeHTML：Microsoft Edge，Trident 的一个分支，移除所有旧版 Internet Explorer 遗留下来的代码，并重写主要的代码以和其他现代浏览器的设计精神互通有无</p>
 </li>
-<li><p>简述一下你对 HTML 语义化的理解<br>在程序中, 语义指的是一段代码的含义 — 例如 “这个 HTML 的元素有什么作用，扮演了什么样的角色”。对开发人员，有利于更加清晰地阅读代码；对搜索引擎，有利于确定上下文和各个关键字的权重，利于 SEO；对浏览器，即使在 CSS 加载异常的情况下，也能提供一个基础的默认文档样式。</p>
+<li><p>HTML 语义化<br>在程序中, 语义指的是一段代码的含义 — 例如 “这个 HTML 的元素有什么作用，扮演了什么样的角色”。对开发人员，有利于更加清晰地阅读代码；对搜索引擎，有利于确定上下文和各个关键字的权重，利于 SEO；对浏览器，即使在 CSS 加载异常的情况下，也能提供一个基础的默认文档样式。</p>
 </li>
 <li><p>不同 TAB 页下通讯</p>
 <ul>
@@ -28,14 +28,24 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// tab1</span></span><br><span class="line"><span class="built_in">window</span>.onstorage = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// tab2</span></span><br><span class="line">localStorage.setItem(<span class="string">"key"</span>, <span class="string">"value"</span>);</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><ol>
-<li>页面导入样式时，使用 <code>&lt;link&gt;</code> 和 <code>@import</code> 有什么区别？<blockquote>
-<p><code>@import</code> 是 CSS 加载样式的方式， <code>&lt;link&gt;</code> 是 HTML 加载样式的方式。页面被加载的时，<code>&lt;link&gt;</code> 会同时被加载，而 <code>@import</code> 引用的 CSS 会等到页面被加载完再加载。<br>2.</p>
-</blockquote>
+<li><p>渲染原理</p>
+</li>
+<li><p>HTTP2</p>
+</li>
+<li><p>HTTP 原理</p>
+</li>
+<li><p>iframe 优缺点<br>优点：<br>样式隔离，内外样式不会冲突；低改动成本接入其他模块功能；无刷新提交表单；无刷新文件上传；实现长连接，作为 Websocket 不支持浏览器的替代方案<br>缺点：<br>iframe 会阻塞主页面的 onload 事件；搜索引擎的检索程序无法解读这种页面，不利于 SEO；iframe 和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。</p>
+</li>
+<li><p>Websocket 替代方案</p>
 </li>
 </ol>
-</div></article></div></main><footer><div class="paginator"><a href="/2018/06/27/打开-Chrome-的隐藏功能/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><ol>
+<li><p>页面导入样式时，使用 <code>&lt;link&gt;</code> 和 <code>@import</code> 有什么区别？<br><code>@import</code> 是 CSS 加载样式的方式， <code>&lt;link&gt;</code> 是 HTML 加载样式的方式。页面被加载的时，<code>&lt;link&gt;</code> 会同时被加载，而 <code>@import</code> 引用的 CSS 会等到页面被加载完再加载。</p>
+</li>
+<li><p>盒模型</p>
+</li>
+</ol>
+</div></article></div></main><footer><div class="paginator"><a href="/2018/06/27/打开-Chrome-的隐藏功能/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
 var disqus_identifier = '2018/07/03/前端知识梳理/';
 var disqus_title = '前端知识梳理';
 var disqus_url = 'http://dawei.lv/2018/07/03/前端知识梳理/';
