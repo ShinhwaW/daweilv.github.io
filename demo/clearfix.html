@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style type="text/css">
+		.container {
+			width: 400px;
+			background-color: green;
+			margin: 10px;
+		}
+
+		.float {
+			float: right;
+			width: 200px;
+			height: 100px;
+			background-color: red;
+		}
+
+		.container1 {
+			overflow: auto;
+
+		}
+
+		.container2 {
+			overflow: hidden;
+		}
+
+		.container3::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		.container4::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+
+		.container5::before,
+		.container5::after {
+			content: "";
+			display: table;
+		}
+
+		.container5::after {
+			clear: both;
+		}
+
+		.container5 {
+			zoom: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container container1">
+		<div class="float"></div>
+	</div>
+	<div class="container container2">
+		<div class="float"></div>
+	</div>
+	<div class="container container3">
+		<div class="float"></div>
+	</div>
+	<div class="container container4">
+		<div class="float"></div>
+	</div>
+	<div class="container container5">
+		<div class="float"></div>
+	</div>
+	<div class="container container6">
+		<div class="float"></div>
+	</div>
+</body>
+
+</html>
