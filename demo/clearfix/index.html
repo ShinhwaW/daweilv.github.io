@@ -18,24 +18,25 @@
 		}
 
 		.container1 {
+			/* overflow: hidden 亦可，各有优缺点  */
 			overflow: auto;
-
 		}
 
-		.container2 {
-			overflow: hidden;
-		}
-
-		.container3::after {
+		.container2::after {
 			content: '';
 			display: block;
 			clear: both;
 		}
 
-		.container4::after {
+		.container3::after {
 			content: '';
 			display: table;
 			clear: both;
+		}
+
+		.container4 {
+			/* 类似 hardcode */
+			height: 100px;
 		}
 
 		.container5::before,
@@ -50,6 +51,11 @@
 
 		.container5 {
 			zoom: 1;
+		}
+
+		.container6 {
+			/* 父元素浮动也可清除浮动，有副作用 */
+			float: right;
 		}
 	</style>
 </head>
