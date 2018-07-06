@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 前端基础拾遗 · David 的个人博客 ๛ก(ｰ̀ωｰ́ก)</title><meta name="description" content="前端基础拾遗 - David"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://dawei.lv/atom.xml" title="David 的个人博客 ๛ก(ｰ̀ωｰ́ก)"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/daweilv" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">前端基础拾遗</h1><div class="post-info">Jul 3, 2018</div><div class="post-content"><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><ol>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 前端基础拾遗 · David 的个人博客 ๛ก(ｰ̀ωｰ́ก)</title><meta name="description" content="前端基础拾遗 - David"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://dawei.lv/atom.xml" title="David 的个人博客 ๛ก(ｰ̀ωｰ́ก)"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/daweilv" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">前端基础拾遗</h1><div class="post-info">Jan 1, 2017</div><div class="post-content"><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><ol>
 <li><p>DOCTYPE 作用<br>DTD（文档类型定义）是一组机器可读的规则，他定义 XML 或 HTML 的特定版本中允许有什么，不允许有什么。而 DOCTYPE 是用来描述使用哪个 DTD。一个不含任何 DOCTYPE 的网页将会以 怪异(quirks) 模式渲染。</p>
 </li>
 <li><p>浏览器解析 HTML 方式<br>非怪异（标准）模式、怪异模式和部分怪异（近乎标准）模式。在标准模式中，浏览器根据规范显示页面；在混杂模式中，页面以一种比较宽松的向后兼容的方式显示。那些基于 Mozilla 的 Gecko 渲染引擎的，或者 Internet Explorer 8 在 strict mode 下，除了在处理表格的方式上有细微差异外，与标准模式相同。</p>
@@ -37,7 +37,8 @@
 </li>
 <li><p>Websocket 替代方案</p>
 </li>
-<li><p>DOM BOM 区别</p>
+<li><p>DOM BOM 区别<br>DOM 全称是 Document Object Model，也就是文档对象模型，用来操作 HTML 中的元素。例如：<code>document.body</code>、<code>document.getElementById(&#39;someid&#39;)</code>、<code>document.title = &#39;Welcome&#39;</code>。</p>
+<p>BOM 是 Browser Object Model，浏览器对象模型，用来控制浏览器的行为。例如，<code>location.href = &quot;http://www.xxxx.com&quot;</code>、<code>window.reload</code>。</p>
 </li>
 <li><p>DOM1/DOM2/DOM3 区别</p>
 </li>
@@ -92,6 +93,10 @@
 </li>
 <li><p>flex</p>
 </li>
+<li><p>grid</p>
+</li>
+<li><p>meta</p>
+</li>
 <li><p>浏览器引擎前缀</p>
 <ol>
 <li>CSS 前缀 Edit<br>主流浏览器引擎前缀:<br>-webkit- (谷歌, Safari, 新版 Opera 浏览器等)<br>-moz- (火狐浏览器)<br>-o- (旧版 Opera 浏览器等)<br>-ms- (IE 浏览器 和 Edge 浏览器)</li>
@@ -116,10 +121,10 @@
 <li><p>依赖</p>
 </li>
 </ol>
-</div></article></div></main><footer><div class="paginator"><a href="/2018/06/27/打开-Chrome-的隐藏功能/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
-var disqus_identifier = '2018/07/03/前端基础拾遗/';
+</div></article></div></main><footer><div class="paginator"><a href="/2017/04/25/javascript-audio-对象常用事件/" class="prev">PREV</a><a href="/2016/12/09/javascript-正则表达式的那些坑/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
+var disqus_identifier = '2017/01/01/前端基础拾遗/';
 var disqus_title = '前端基础拾遗';
-var disqus_url = 'http://dawei.lv/2018/07/03/前端基础拾遗/';
+var disqus_url = 'http://dawei.lv/2017/01/01/前端基础拾遗/';
 (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
