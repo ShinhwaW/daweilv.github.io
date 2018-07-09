@@ -48,6 +48,8 @@
 </li>
 <li><p>浏览器前进/后退缓存（Backward/Forward Cache，BF Cache）<br><a href="https://harttle.land/2017/03/12/backward-forward-cache.html" target="_blank" rel="noopener">https://harttle.land/2017/03/12/backward-forward-cache.html</a><br><a href="https://developer.mozilla.org/en-US/docs/Archive/Misc_top_level/Working_with_BFCache" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Archive/Misc_top_level/Working_with_BFCache</a></p>
 </li>
+<li><p>事件的传播机制 <a href="https://www.w3.org/TR/uievents/" target="_blank" rel="noopener">w3c</a><br><img src="eventflow.svg" alt="eventflow"><br>三个阶段：首先进入捕获阶段 <code>Window</code> -&gt;<code>Document</code>-&gt;<code>&lt;html&gt;</code>-&gt;<code>&lt;body&gt;</code>，直到达到目标元素，再进入冒泡阶段，从目标元素反向沿着捕获路径回到 <code>Window</code>。</p>
+</li>
 </ol>
 <h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><ol>
 <li><p>盒子模型<br>CSS 中的每个元素都被表示为一个矩形的盒子，每个盒子有四个边：content edge, padding edge, border edge, and margin edge。<br>box-sizing： content-box(默认)，border-box ，padding-box(deprecated)。<br>content-box 下盒子实际宽度不等于 width，不包括 padding 和 border 部分，布局计算不方便。border-box 下盒子实际宽度与 width 相等。</p>
@@ -83,7 +85,12 @@
 <p>BFC 中的元素的布局是不受外界的影响（我们往往利用这个特性来消除浮动元素对其非浮动的兄弟元素和其子元素带来的影响。）并且在一个 BFC 中，块盒与行盒（行盒由一行中所有的内联元素所组成）都会垂直的沿着其父元素的边框排列。</p>
 </blockquote>
 </li>
-<li><p>动画实现</p>
+<li><p>动画实现<br>css 实现动画与 js 不同，css 是定义关键帧，js 则是定义渲染页面与运行时间差的关系。</p>
+<ul>
+<li>css 实现 <a href="https://codepen.io/daweilv/pen/ERqeVa" target="_blank" rel="noopener">demo</a></li>
+<li>setTimeout 实现 <a href="https://codepen.io/daweilv/pen/xJKKva" target="_blank" rel="noopener">demo</a></li>
+<li>requestAnimationFrame 实现 <a href="https://codepen.io/daweilv/pen/zLOYoJ" target="_blank" rel="noopener">demo</a></li>
+</ul>
 </li>
 <li><p>选择符</p>
 </li>
