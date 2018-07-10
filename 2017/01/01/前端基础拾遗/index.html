@@ -108,27 +108,40 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 不知道宽高的情况下</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">60%</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>css 单位</p>
-</li>
-<li><p>响应式布局</p>
-</li>
-<li><p>flex</p>
-</li>
-<li><p>grid</p>
-</li>
-<li><p>meta</p>
-</li>
-<li><p>浏览器引擎前缀</p>
-<ol>
-<li>CSS 前缀 Edit<br>主流浏览器引擎前缀:<br>-webkit- (谷歌, Safari, 新版 Opera 浏览器等)<br>-moz- (火狐浏览器)<br>-o- (旧版 Opera 浏览器等)<br>-ms- (IE 浏览器 和 Edge 浏览器)</li>
-<li>API 接口前缀<br>WebKit (谷歌, Safari, 新版 Opera 浏览器等)<br>Moz (火狐浏览器)<br>O (旧版 Opera 浏览器等)<br>MS (IE 浏览器 和 Edge 浏览器)</li>
-<li>API 属性和方法前缀<br>webkit (谷歌, Safari, 新版 Opera 浏览器等)<br>moz (火狐浏览器)<br>o (旧版 Opera 浏览器等)<br>ms (IE 浏览器 和 Edge 浏览器)</li>
-</ol>
-</li>
-<li><p>页面导入样式时，使用 <code>&lt;link&gt;</code> 和 <code>@import</code> 有什么区别？<br><code>@import</code> 是 CSS 加载样式的方式， <code>&lt;link&gt;</code> 是 HTML 加载样式的方式。页面被加载的时，<code>&lt;link&gt;</code> 会同时被加载，而 <code>@import</code> 引用的 CSS 会等到页面被加载完再加载。</p>
-</li>
-<li><p>tips 碰撞检测</p>
+<ul>
+<li>rem<br>html 元素的 font-size * 当前元素的 rem = 当前元素的 px，响应式布局利器</li>
+<li>em<br>根据自身的 font-size * 当前元素的 em = 当前元素的 px，按钮根据文字的大小设置对应比例的 padding 比较好用</li>
+<li>vh<br>1/100 的视口高度，满屏布局的时候比较好用</li>
+<li>vw<br>1/100 的视口高度</li>
+<li>vmin / vmax<br>vh 和 vw 依据于视口的高度和宽度，相对的，vmin 和 vmax 则关于视口高度和宽度两者的最小或者最大值。</li>
+<li>ex<br>小写 x 的高度</li>
+<li>ch<br>和数字 0 的宽度</li>
+</ul>
 </li>
 </ol>
+<p>10) 响应式布局</p>
+<p>11) flex<br>    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener">a-guide-to-flexbox</a></p>
+<p>12) grid<br>    <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank" rel="noopener">complete-guide-grid</a></p>
+<p>13) meta</p>
+<p>14) 浏览器引擎前缀</p>
+<pre><code>1.  CSS 前缀 Edit
+    主流浏览器引擎前缀:
+    -webkit- (谷歌, Safari, 新版 Opera 浏览器等)
+    -moz- (火狐浏览器)
+    -o- (旧版 Opera 浏览器等)
+    -ms- (IE 浏览器 和 Edge 浏览器)
+2.  API 接口前缀
+    WebKit (谷歌, Safari, 新版 Opera 浏览器等)
+    Moz (火狐浏览器)
+    O (旧版 Opera 浏览器等)
+    MS (IE 浏览器 和 Edge 浏览器)
+3.  API 属性和方法前缀
+    webkit (谷歌, Safari, 新版 Opera 浏览器等)
+    moz (火狐浏览器)
+    o (旧版 Opera 浏览器等)
+    ms (IE 浏览器 和 Edge 浏览器)
+</code></pre><p>15) 页面导入样式时，使用 <code>&lt;link&gt;</code> 和 <code>@import</code> 有什么区别？<br>    <code>@import</code> 是 CSS 加载样式的方式， <code>&lt;link&gt;</code> 是 HTML 加载样式的方式。页面被加载的时，<code>&lt;link&gt;</code> 会同时被加载，而 <code>@import</code> 引用的 CSS 会等到页面被加载完再加载。</p>
+<p>16) tips 碰撞检测</p>
 <h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><ol>
 <li><p>基本类型</p>
 </li>
@@ -141,7 +154,7 @@
 <li><p>依赖</p>
 </li>
 </ol>
-</div></article></div></main><footer><div class="paginator"><a href="/2017/04/25/javascript-audio-对象常用事件/" class="prev">PREV</a><a href="/2016/12/09/javascript-正则表达式的那些坑/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
+</div></article></div></main><footer><div class="paginator"><a href="/2017/04/25/javascript-audio-对象常用事件/" class="prev">上一篇</a><a href="/2016/12/09/javascript-正则表达式的那些坑/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
 var disqus_identifier = '2017/01/01/前端基础拾遗/';
 var disqus_title = '前端基础拾遗';
 var disqus_url = 'http://dawei.lv/2017/01/01/前端基础拾遗/';
