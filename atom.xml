@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dawei.lv/"/>
-  <updated>2018-06-27T09:09:16.098Z</updated>
+  <updated>2018-07-12T12:17:16.516Z</updated>
   <id>http://dawei.lv/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于媒体查询和 rem 的响应式布局实践</title>
+    <link href="http://dawei.lv/2018/07/12/%E5%9F%BA%E4%BA%8E%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E5%92%8C-rem-%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://dawei.lv/2018/07/12/基于媒体查询和-rem-的响应式布局实践/</id>
+    <published>2018-07-12T08:06:01.000Z</published>
+    <updated>2018-07-12T12:17:16.516Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="媒体查询-media"><a href="#媒体查询-media" class="headerlink" title="媒体查询 @media"></a>媒体查询 @media</h3><p>我们开发一个网站的时候希望在 PC 端、iPad 端、手机端都有良好的体验，CSS 给我们提供了一个强大的条件判断语法，可以根据设备的宽度来设置不同的样式，从而实现不同的设备应用不同的布局。</p><p><img src="./layout1.png" alt="iPhone7"><br><img src="./layout2.png" alt="iPad"><br><img src="./layout3.png" alt="PC"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;媒体查询-media&quot;&gt;&lt;a href=&quot;#媒体查询-media&quot; class=&quot;headerlink&quot; title=&quot;媒体查询 @media&quot;&gt;&lt;/a&gt;媒体查询 @media&lt;/h3&gt;&lt;p&gt;我们开发一个网站的时候希望在 PC 端、iPad 端、手机端都有良好的体
+      
+    
+    </summary>
+    
+    
+      <category term="rem" scheme="http://dawei.lv/tags/rem/"/>
+    
+      <category term="css" scheme="http://dawei.lv/tags/css/"/>
+    
+      <category term="media query" scheme="http://dawei.lv/tags/media-query/"/>
+    
+  </entry>
   
   <entry>
     <title>打开 Chrome 的隐藏功能</title>
@@ -472,36 +499,6 @@
     
     
       <category term="mongo" scheme="http://dawei.lv/tags/mongo/"/>
-    
-      <category term="shell" scheme="http://dawei.lv/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bash 命令行常用快捷键整理</title>
-    <link href="http://dawei.lv/2016/07/19/bash-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/"/>
-    <id>http://dawei.lv/2016/07/19/bash-命令行常用快捷键整理/</id>
-    <published>2016-07-18T16:04:37.000Z</published>
-    <updated>2018-05-30T06:07:19.753Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="编辑命令"><a href="#编辑命令" class="headerlink" title="编辑命令"></a>编辑命令</h2><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>Ctrl + a</td><td>移到命令行首</td></tr><tr><td>Ctrl + e</td><td>移到命令行尾</td></tr><tr><td>Ctrl + f</td><td>按字符前移（右向）</td></tr><tr><td>Ctrl + b</td><td>按字符后移（左向）</td></tr><tr><td>Alt + f</td><td>按单词前移（右向）</td></tr><tr><td>Alt + b</td><td>按单词后移（左向）</td></tr><tr><td>Ctrl + xx</td><td>在命令行首和光标之间移动</td></tr><tr><td>Ctrl + u</td><td>从光标处删除至命令行首</td></tr><tr><td>Ctrl + k</td><td>从光标处删除至命令行尾</td></tr><tr><td>Ctrl + w</td><td>从光标处删除至字首</td></tr><tr><td>Alt + d</td><td>从光标处删除至字尾</td></tr><tr><td>Ctrl + d</td><td>删除光标处的字符</td></tr><tr><td>Ctrl + h</td><td>删除光标前的字符</td></tr><tr><td>Ctrl + y</td><td>粘贴至光标后</td></tr><tr><td>Alt + c</td><td>从光标处更改为首字母大写的单词</td></tr><tr><td>Alt + u</td><td>从光标处更改为全部大写的单词</td></tr><tr><td>Alt + l</td><td>从光标处更改为全部小写的单词</td></tr><tr><td>Ctrl + t</td><td>交换光标处和之前的字符</td></tr><tr><td>Alt + t</td><td>交换光标处和之前的单词</td></tr><tr><td>Alt + Backspace</td><td>与 Ctrl + w 类似，分隔符有些差别</td></tr><tr><td>Ctrl + r</td><td>逆向搜索命令历史</td></tr><tr><td>Ctrl + g</td><td>从历史搜索模式退出</td></tr><tr><td>Ctrl + p</td><td>历史中的上一条命令</td></tr><tr><td>Ctrl + n</td><td>历史中的下一条命令</td></tr><tr><td>Alt + .</td><td>使用上一条命令的最后一个参数</td></tr></tbody></table><h2 id="控制命令"><a href="#控制命令" class="headerlink" title="控制命令"></a>控制命令</h2><table><thead><tr><th>命令</th><th>解释</th></tr></thead><tbody><tr><td>Ctrl + l</td><td>清屏</td></tr><tr><td>Ctrl + o</td><td>执行当前命令，并选择上一条命令</td></tr><tr><td>Ctrl + s</td><td>阻止屏幕输出</td></tr><tr><td>Ctrl + q</td><td>允许屏幕输出</td></tr><tr><td>Ctrl + c</td><td>终止命令</td></tr><tr><td>Ctrl + z</td><td>挂起命令</td></tr></tbody></table>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;编辑命令&quot;&gt;&lt;a href=&quot;#编辑命令&quot; class=&quot;headerlink&quot; title=&quot;编辑命令&quot;&gt;&lt;/a&gt;编辑命令&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;命令&lt;/th&gt;
-&lt;th&gt;解释&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbod
-      
-    
-    </summary>
-    
     
       <category term="shell" scheme="http://dawei.lv/tags/shell/"/>
     
