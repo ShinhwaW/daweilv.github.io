@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dawei.lv/"/>
-  <updated>2018-07-12T12:21:49.426Z</updated>
+  <updated>2018-07-12T13:29:56.009Z</updated>
   <id>http://dawei.lv/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://dawei.lv/2018/07/12/%E5%9F%BA%E4%BA%8E%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E5%92%8C-rem-%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E5%AE%9E%E8%B7%B5/"/>
     <id>http://dawei.lv/2018/07/12/基于媒体查询和-rem-的响应式布局实践/</id>
     <published>2018-07-12T08:06:01.000Z</published>
-    <updated>2018-07-12T12:21:49.426Z</updated>
+    <updated>2018-07-12T13:29:56.009Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="媒体查询-media"><a href="#媒体查询-media" class="headerlink" title="媒体查询 @media"></a>媒体查询 @media</h3><p>我们开发一个网站的时候希望在 PC 端、iPad 端、手机端都有良好的体验，CSS 给我们提供了一个强大的条件判断语法，可以根据设备的宽度来设置不同的样式，从而实现不同的设备应用不同的布局。</p><p><img src="./layout1.png" alt="iPhone7"><br><img src="./layout2.png" alt="iPad"><br><img src="./layout3.png" alt="PC"></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="媒体查询-media"><a href="#媒体查询-media" class="headerlink" title="媒体查询 @media"></a>媒体查询 @media</h3><p>我们开发一个网站的时候希望在手机端、iPad 端、PC 端都有良好的体验，CSS 给我们提供了一个强大的条件判断语法，可以根据设备的宽度来设置不同的样式，从而实现不同的设备应用不同的布局。</p><blockquote><p>下图展示了利用 <code>@media</code> 实现的同一页面手机端 2 列、iPad 端 3 列、PC 端 4 列的布局。<br><img src="./layout.jpeg" alt="layout"></p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;媒体查询-media&quot;&gt;&lt;a href=&quot;#媒体查询-media&quot; class=&quot;headerlink&quot; title=&quot;媒体查询 @media&quot;&gt;&lt;/a&gt;媒体查询 @media&lt;/h3&gt;&lt;p&gt;我们开发一个网站的时候希望在 PC 端、iPad 端、手机端都有良好的体
+        &lt;h3 id=&quot;媒体查询-media&quot;&gt;&lt;a href=&quot;#媒体查询-media&quot; class=&quot;headerlink&quot; title=&quot;媒体查询 @media&quot;&gt;&lt;/a&gt;媒体查询 @media&lt;/h3&gt;&lt;p&gt;我们开发一个网站的时候希望在手机端、iPad 端、PC 端都有良好的体验
       
     
     </summary>
