@@ -15,7 +15,7 @@
 <p>默认样式针对移动端编写，减少匹配规则，加快移动端的解析。当设备宽度大于 576px 时，就匹配到了 <code>@media (min-width: 576px)</code>，此时 <code>width: 33.333%;</code> 会将原来的 <code>50%</code> 覆盖掉，显示为 3 列。当设备宽度大于 1024px 时，就匹配到了 <code>@media (min-width: 1024px)</code>，此时 <code>width: 25%;</code> 进一步覆盖掉原来的 <code>33.333%</code>，显示为 4 列。</p>
 <p>通过合理的布局 DOM 结构，可以让不同设备的浏览效果完全不同。配合 <code>flex</code> 布局的 <code>order</code> 属性，DOM 间的位置交换变得更加简单。</p>
 <h3 id="REM"><a href="#REM" class="headerlink" title="REM"></a>REM</h3><p>我们使用三个断点解决了不同端的布局问题，但这只是第一步。我们现在还是用的 px 做单位，设计师给我们出的 iPhone6 的设计稿，一个按钮 80px 宽度，iPhone6 上可以这么写。iPhone5s 空间不足导致换行、iPhone6 Plus 留白怎么办？这时候就要召唤出我们的大杀器 rem 了。</p>
-<p>rem 是一个相对于 html 根元素 font-size 的单位。<code>元素实际尺寸 = 元素 rem 值 x html 的 font-size 值</code>。也就是说当 html 的 font-size 设置为 50px 时，2rem 的元素实际尺寸就是 100px。</p>
+<p>rem 是一个根据 html 根元素 font-size 计算的相对单位。<code>元素实际尺寸 = 元素 rem 值 x html 的 font-size 值</code>。也就是说当 html 的 font-size 设置为 50px 时，2rem 的元素实际尺寸就是 100px。</p>
 <p>我司设计师通常使用 2 倍的 iPhone6 作为设计稿。iPhone6 设计稿的宽度为<code>750px</code>，对应实际尺寸<code>350px</code>。为了方便换算，我们将 html 的 font-size 设置为 <code>50px</code>，实际尺寸 <code>100px = 2rem</code>。而这 <code>2rem</code> 正好等于设计稿上的 <code>200</code> 向左移动两位小数点，换算起来非常方便。</p>
 <blockquote>
 <p>你说的我都懂，但这跟 5s、6p 适配有什么关系呢？？</p>
