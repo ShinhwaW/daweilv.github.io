@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Linux 服务器首次快速配置 · David 的个人博客 ๛ก(ｰ̀ωｰ́ก)</title><meta name="description" content="Linux 服务器首次快速配置 - David"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://dawei.lv/atom.xml" title="David 的个人博客 ๛ก(ｰ̀ωｰ́ก)"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/daweilv" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Linux 服务器首次快速配置</h1><div class="post-info">Jul 18, 2016</div><div class="post-content"><blockquote>
+<p>对应 linux 版本：Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-86-generic x86_64)</p>
+</blockquote>
+<p>拿到新云服务器后的快速配置方案，供参考。</p>
+<a id="more"></a>
+<h2 id="修改-root-默认密码"><a href="#修改-root-默认密码" class="headerlink" title="修改 root 默认密码"></a>修改 root 默认密码</h2><p>用 root 登录，输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure>
+<p>提示输入新的密码，重复两次</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter new UNIX password:</span><br><span class="line">Retype new UNIX password:</span><br></pre></td></tr></table></figure>
+<p>看到下面的提示即表示修改成功了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd: password updated successfully</span><br></pre></td></tr></table></figure>
+<h2 id="修改-ssh-默认端口号"><a href="#修改-ssh-默认端口号" class="headerlink" title="修改 ssh 默认端口号"></a>修改 ssh 默认端口号</h2><p>执行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<p>将下面的 Port <code>22</code> 改为你想要设置的端口号（如 <code>2333</code>）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Package generated configuration file</span></span><br><span class="line"><span class="comment"># See the sshd_config(5) manpage for details</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># What ports, IPs and protocols we listen for</span></span><br><span class="line">Port 22</span><br><span class="line"><span class="comment"># Use these options to restrict which interfaces/protocols sshd will bind to</span></span><br></pre></td></tr></table></figure>
+<p>保存文件后，执行下面的命令重启 ssh 服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
+<h3 id="验证-root-密码和端口号修改生效"><a href="#验证-root-密码和端口号修改生效" class="headerlink" title="验证 root 密码和端口号修改生效"></a>验证 root 密码和端口号修改生效</h3><p>执行命令退出服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+<p>在客户端命令行中执行（其中 example.com 为你的服务器域名或 ip 地址）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -p 2333 root@example.com</span><br></pre></td></tr></table></figure>
+<p>输入刚刚设置的新密码，就能看到欢迎信息了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-86-generic x86_64)</span><br><span class="line"></span><br><span class="line"> * Documentation:  https://help.ubuntu.com/</span><br></pre></td></tr></table></figure>
+<h3 id="ssh-保持连接（解决-Broken-pipe-的问题）"><a href="#ssh-保持连接（解决-Broken-pipe-的问题）" class="headerlink" title="ssh 保持连接（解决 Broken pipe 的问题）"></a>ssh 保持连接（解决 Broken pipe 的问题）</h3><p>有时候我们客户端长时间不操作，再去操作的时候就会半天没反应，等一会后提示 <code>broken pipe</code>，下面的是博主的解决方法。</p>
+<h4 id="客户端设置"><a href="#客户端设置" class="headerlink" title="客户端设置"></a>客户端设置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<p>在最后添加两个参数</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TCPKeepAlive yes</span><br><span class="line">ServerAliveInterval <span class="number">300</span></span><br></pre></td></tr></table></figure>
+<p>第二个参数表示每过 5 分钟发一个数据包到服务器表示“我还活着”。</p>
+<h4 id="服务器端设置"><a href="#服务器端设置" class="headerlink" title="服务器端设置"></a>服务器端设置</h4><p>如果在客户端修改过 ssh 设置后还遇到 broken pipe 的问题，那么就把服务器端的设置也修改一下吧。执行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<p>在最后增加一行</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ClientAliveInterval <span class="number">60</span></span><br><span class="line">ClientAliveCountMax <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>作用是让 ssh server 发送“心跳”信号来维持持续连接。</p>
+<h2 id="安装-mysql"><a href="#安装-mysql" class="headerlink" title="安装 mysql"></a>安装 mysql</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server mysql-client</span><br></pre></td></tr></table></figure>
+<p>安装过程中两次输入密码</p>
+<p>安装成功后执行命令，验证安装完成</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql restart</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>输入密码登录，后看到欢迎信息</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Welcome to the MySQL monitor.  Commands <span class="keyword">end</span> <span class="keyword">with</span> ; or \g.</span><br><span class="line">Your MySQL connection id is 42</span><br><span class="line">Server version: 5.5.49-0ubuntu0.14.04.1 (Ubuntu)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type '<span class="keyword">help</span>;' or '\h' for help. <span class="keyword">Type</span> <span class="string">'\c'</span> <span class="keyword">to</span> <span class="keyword">clear</span> the <span class="keyword">current</span> <span class="keyword">input</span> statement.</span><br></pre></td></tr></table></figure>
+<h3 id="mysql-设置外网访问权限"><a href="#mysql-设置外网访问权限" class="headerlink" title="mysql 设置外网访问权限"></a>mysql 设置外网访问权限</h3><p>执行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/mysql/my.cnf</span><br></pre></td></tr></table></figure>
+<p>找到 <code>bind-address =127.0.0.1</code> 注释掉，使得不再只允许本地访问</p>
+<p>保存后执行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql restart</span><br></pre></td></tr></table></figure>
+<p>重新登录 mysql</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use mysql;</span><br></pre></td></tr></table></figure>
+<p>查询 host 值：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select user,host from user;</span><br><span class="line">mysql&gt; update user set host='%' where user='root';</span><br><span class="line">mysql&gt; flush privileges;</span><br></pre></td></tr></table></figure>
+<h3 id="导出导入数据库"><a href="#导出导入数据库" class="headerlink" title="导出导入数据库"></a>导出导入数据库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u root -p database_name &gt; dump.sql</span><br><span class="line">password *****</span><br></pre></td></tr></table></figure>
+<p>提前建好库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p database_name &lt; dump.sql</span><br><span class="line">password *****</span><br></pre></td></tr></table></figure>
+<h2 id="安装-nodejs"><a href="#安装-nodejs" class="headerlink" title="安装 nodejs"></a>安装 nodejs</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果提示未安装 curl，执行 <code>apt-get install curl</code></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
+<p>好了，到此我们的服务器的快速配置已经完成了。</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2016/07/19/bash-命令行常用快捷键整理/" class="prev">PREV</a><a href="/2016/07/18/Mac-键盘按键符号对照，Mac-新手必看/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
+var disqus_identifier = '2016/07/18/Linux-服务器首次快速配置/';
+var disqus_title = 'Linux 服务器首次快速配置';
+var disqus_url = 'http://dawei.lv/2016/07/18/Linux-服务器首次快速配置/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//lnyx.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2018 <a href="https://github.com/daweilv" target="_blank" rel="nofollow">David</a>. Hosted by <a href="https://pages.coding.me" target="_blank" rel="nofollow" style="font-weight: bold">Coding Pages</a></p><p>友情链接 <a href="https://xiequan.info/" target="_blank" rel="nofollow">谢权SELF</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-119593463-1",'auto');ga('send','pageview');</script></body></html>
