@@ -1,6 +1,8 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 前端基础拾遗 · David 的个人博客 ๛ก(ｰ̀ωｰ́ก)</title><meta name="description" content="前端基础拾遗 - David"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://dawei.lv/atom.xml" title="David 的个人博客 ๛ก(ｰ̀ωｰ́ก)"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/daweilv" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">前端基础拾遗</h1><div class="post-info">Jan 1, 2017</div><div class="post-content"><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><ol>
-<li><p>DOCTYPE 作用<br>DTD（文档类型定义）是一组机器可读的规则，他定义 XML 或 HTML 的特定版本中允许有什么，不允许有什么。而 DOCTYPE 是用来描述使用哪个 DTD，保证网页以标准模式渲染，一个不含任何 DOCTYPE 的网页将会以 怪异(quirks) 模式渲染。HTML5 之前的 HTML 基于 SGML(Standard Generalized Markup Language, 标准通用标记语言)标准，需要 DTD 来保证在标准模式下渲染。HTML5 只需要 DOCTYPE 就可以保证在标准模式下渲染。</p>
-</li>
+<li>DOCTYPE 作用<br>DTD（文档类型定义）是一组机器可读的规则，他定义 XML 或 HTML 的特定版本中允许有什么，不允许有什么。而 DOCTYPE 是用来描述使用哪个 DTD，保证网页以标准模式渲染，一个不含任何 DOCTYPE 的网页将会以 怪异(quirks) 模式渲染。HTML5 之前的 HTML 基于 SGML(Standard Generalized Markup Language, 标准通用标记语言)标准，需要 DTD 来保证在标准模式下渲染。HTML5 只需要 DOCTYPE 就可以保证在标准模式下渲染。</li>
+</ol>
+<a id="more"></a>
+<ol start="2">
 <li><p>浏览器解析 HTML 方式<br>标准模式、怪异模式和部分怪异（近乎标准）模式。在标准模式中，浏览器根据规范显示页面；在混杂模式中，页面以一种比较宽松的向后兼容的方式显示。那些基于 Mozilla 的 Gecko 渲染引擎的，或者 Internet Explorer 8 在 strict mode 下，除了在处理表格的方式上有细微差异外，与标准模式相同。</p>
 </li>
 <li><p>行内元素与块级元素对比<br>内容上，<br>一般情况下，行内元素只能包含数据和其他行内元素。而块级元素可以包含行内元素和其他块级元素。这种结构上的包含继承区别可以使块级元素创建比行内元素更”大型“的结构。<br>格式上，<br>默认情况下，行内元素不会以新行开始，而块级元素会新起一行。</p>
