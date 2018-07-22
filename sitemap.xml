@@ -2,37 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dawei.lv/2018/06/27/%E5%85%8D%E5%AF%86%E7%A0%81-SSH-%E7%99%BB%E5%BD%95-Ubuntu/</loc>
+    
+    <lastmod>2018-07-22T14:48:52.693Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/2018/07/21/babel-%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</loc>
+    
+    <lastmod>2018-07-21T16:57:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dawei.lv/2016/07/18/Mac-%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E7%AC%A6%E5%8F%B7%E5%AF%B9%E7%85%A7%EF%BC%8CMac-%E6%96%B0%E6%89%8B%E5%BF%85%E7%9C%8B/</loc>
     
-    <lastmod>2018-07-20T08:18:05.886Z</lastmod>
+    <lastmod>2018-07-20T08:18:05.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2018/06/27/%E6%89%93%E5%BC%80-Chrome-%E7%9A%84%E9%9A%90%E8%97%8F%E5%8A%9F%E8%83%BD/</loc>
     
-    <lastmod>2018-07-20T08:16:18.030Z</lastmod>
+    <lastmod>2018-07-20T08:16:18.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2017/01/01/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E6%8B%BE%E9%81%97/</loc>
     
-    <lastmod>2018-07-20T08:15:43.555Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dawei.lv/2018/06/27/%E5%85%8D%E5%AF%86%E7%A0%81-SSH-%E7%99%BB%E5%BD%95-Ubuntu/</loc>
-    
-    <lastmod>2018-07-20T08:15:28.683Z</lastmod>
+    <lastmod>2018-07-20T08:15:43.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2018/07/12/%E5%9F%BA%E4%BA%8E%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E5%92%8C-rem-%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E5%AE%9E%E8%B7%B5/</loc>
     
-    <lastmod>2018-07-20T08:15:28.682Z</lastmod>
+    <lastmod>2018-07-20T08:15:28.000Z</lastmod>
     
   </url>
   
@@ -46,56 +53,56 @@
   <url>
     <loc>http://dawei.lv/2018/06/27/%E5%A5%BD%E7%94%A8%E7%9A%84-shell-%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/</loc>
     
-    <lastmod>2018-06-27T06:32:37.425Z</lastmod>
+    <lastmod>2018-06-27T06:32:37.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2018/06/27/Progressive-Web-App-%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/</loc>
     
-    <lastmod>2018-06-27T03:51:57.035Z</lastmod>
+    <lastmod>2018-06-27T03:51:57.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2018/06/22/%E4%B8%BA%E4%BD%A0%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS-%E5%8D%87%E7%BA%A7-https/</loc>
     
-    <lastmod>2018-06-27T02:05:50.385Z</lastmod>
+    <lastmod>2018-06-27T02:05:50.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2016/07/18/Linux-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%A6%96%E6%AC%A1%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE/</loc>
     
-    <lastmod>2018-06-22T02:02:14.113Z</lastmod>
+    <lastmod>2018-06-22T02:02:14.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2018/06/21/npm-%E7%89%88%E6%9C%AC%E5%8F%B7%E4%B8%BB%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E8%A7%84%E5%88%99/</loc>
     
-    <lastmod>2018-06-22T02:02:02.450Z</lastmod>
+    <lastmod>2018-06-22T02:02:02.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2018/06/08/webpack-%E6%89%93%E5%8C%85%E7%BB%84%E4%BB%B6%E5%BA%93%E5%B9%B6%E5%8F%91%E5%B8%83%E5%88%B0-npm/</loc>
     
-    <lastmod>2018-06-22T02:01:50.325Z</lastmod>
+    <lastmod>2018-06-22T02:01:50.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2016/12/09/%E8%AE%B0%E4%B8%80%E6%AC%A1-radio-%E6%A0%87%E7%AD%BE-onblur-%E5%BC%82%E5%B8%B8%E7%9A%84%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B/</loc>
     
-    <lastmod>2018-06-22T02:01:18.182Z</lastmod>
+    <lastmod>2018-06-22T02:01:18.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2018/05/30/%E9%98%BF%E9%87%8C%E4%BA%91RDS%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E6%96%B9%E6%B3%95/</loc>
     
-    <lastmod>2018-06-22T02:01:08.825Z</lastmod>
+    <lastmod>2018-06-22T02:01:08.000Z</lastmod>
     
   </url>
   
@@ -109,63 +116,63 @@
   <url>
     <loc>http://dawei.lv/2016/12/09/%E5%B8%B8%E7%94%A8-MySQL-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%AD%E5%8F%A5/</loc>
     
-    <lastmod>2018-05-30T06:08:10.888Z</lastmod>
+    <lastmod>2018-05-30T06:08:10.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2017/04/25/javascript-audio-%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E4%BA%8B%E4%BB%B6/</loc>
     
-    <lastmod>2018-05-30T06:07:44.064Z</lastmod>
+    <lastmod>2018-05-30T06:07:44.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2016/12/09/Terminal-%E8%AE%BE%E7%BD%AE-path%E3%80%81alias/</loc>
     
-    <lastmod>2018-05-30T06:07:19.819Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dawei.lv/2016/09/01/MongoDB-%E5%9C%A8Shell%E4%B8%AD%E6%8F%92%E5%85%A5-%E6%9B%B4%E6%96%B0%E7%9A%84%E6%95%B4%E6%95%B0%E4%BC%9A%E5%8F%98%E6%88%90%E6%B5%AE%E7%82%B9%E6%95%B0/</loc>
-    
-    <lastmod>2018-05-30T06:07:19.755Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dawei.lv/2017/05/04/%E5%9C%A8-Terminal-%E4%B8%AD%E6%89%93%E5%BC%80-Sublime/</loc>
-    
-    <lastmod>2018-05-30T06:07:19.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dawei.lv/2016/07/19/bash-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</loc>
-    
-    <lastmod>2018-05-30T06:07:19.753Z</lastmod>
+    <lastmod>2018-05-30T06:07:19.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2016/12/09/javascript-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</loc>
     
-    <lastmod>2018-05-30T06:07:19.753Z</lastmod>
+    <lastmod>2018-05-30T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/2017/05/04/%E5%9C%A8-Terminal-%E4%B8%AD%E6%89%93%E5%BC%80-Sublime/</loc>
+    
+    <lastmod>2018-05-30T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/2016/09/01/MongoDB-%E5%9C%A8Shell%E4%B8%AD%E6%8F%92%E5%85%A5-%E6%9B%B4%E6%96%B0%E7%9A%84%E6%95%B4%E6%95%B0%E4%BC%9A%E5%8F%98%E6%88%90%E6%B5%AE%E7%82%B9%E6%95%B0/</loc>
+    
+    <lastmod>2018-05-30T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/2016/07/19/bash-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</loc>
+    
+    <lastmod>2018-05-30T06:07:19.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/2016/12/09/vi-%E7%BC%96%E8%BE%91%E5%99%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</loc>
     
-    <lastmod>2018-05-30T06:07:19.753Z</lastmod>
+    <lastmod>2018-05-30T06:07:19.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dawei.lv/404.html</loc>
     
-    <lastmod>2018-05-21T01:34:33.651Z</lastmod>
+    <lastmod>2018-05-21T01:34:33.000Z</lastmod>
     
   </url>
   
