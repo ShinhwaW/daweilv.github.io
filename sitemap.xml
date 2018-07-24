@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://dawei.lv/google052de39fb48869d8.html</loc>
-    
-    <lastmod>2018-07-24T06:46:50.952Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://dawei.lv/2018/07/21/%E6%95%99%E7%BB%83%E6%88%91%E6%83%B3%E5%86%99%E4%B8%80%E4%B8%AA-helloworld-Babel-%E6%8F%92%E4%BB%B6/</loc>
     
     <lastmod>2018-07-23T05:41:26.122Z</lastmod>
@@ -47,6 +40,62 @@
     <loc>http://dawei.lv/2018/07/12/%E5%9F%BA%E4%BA%8E%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E5%92%8C-rem-%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E5%AE%9E%E8%B7%B5/</loc>
     
     <lastmod>2018-07-20T08:15:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/demo/mouse-postion/index.html</loc>
+    
+    <lastmod>2018-07-18T10:19:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/demo/holy-grail-layout/flex.html</loc>
+    
+    <lastmod>2018-07-16T01:35:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/demo/reponsive-layout/index.html</loc>
+    
+    <lastmod>2018-07-12T13:46:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/demo/animation/css.html</loc>
+    
+    <lastmod>2018-07-08T11:17:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/demo/margin-collapsing/index.html</loc>
+    
+    <lastmod>2018-07-06T02:19:17.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/demo/float/index.html</loc>
+    
+    <lastmod>2018-07-05T07:11:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/demo/multi-float-clearfix/index.html</loc>
+    
+    <lastmod>2018-07-05T07:11:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/demo/clearfix/index.html</loc>
+    
+    <lastmod>2018-07-05T07:09:31.000Z</lastmod>
     
   </url>
   
@@ -142,6 +191,13 @@
   </url>
   
   <url>
+    <loc>http://dawei.lv/2016/12/09/Terminal-%E8%AE%BE%E7%BD%AE-path%E3%80%81alias/</loc>
+    
+    <lastmod>2018-05-30T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dawei.lv/2017/05/04/%E5%9C%A8-Terminal-%E4%B8%AD%E6%89%93%E5%BC%80-Sublime/</loc>
     
     <lastmod>2018-05-30T06:07:19.000Z</lastmod>
@@ -149,14 +205,7 @@
   </url>
   
   <url>
-    <loc>http://dawei.lv/2016/12/09/vi-%E7%BC%96%E8%BE%91%E5%99%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</loc>
-    
-    <lastmod>2018-05-30T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dawei.lv/2016/12/09/Terminal-%E8%AE%BE%E7%BD%AE-path%E3%80%81alias/</loc>
+    <loc>http://dawei.lv/2016/12/09/javascript-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</loc>
     
     <lastmod>2018-05-30T06:07:19.000Z</lastmod>
     
@@ -170,7 +219,7 @@
   </url>
   
   <url>
-    <loc>http://dawei.lv/2016/12/09/javascript-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</loc>
+    <loc>http://dawei.lv/2016/12/09/vi-%E7%BC%96%E8%BE%91%E5%99%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/</loc>
     
     <lastmod>2018-05-30T06:07:19.000Z</lastmod>
     
