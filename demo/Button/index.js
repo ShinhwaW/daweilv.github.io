@@ -57,10 +57,25 @@ export default class CButton extends Component {
             ComponentProp = 'a';
         }
         return (
-            <componentprop classname="{classNames(" `${prefixcls}`,="" {="" 'cine-ripple':="" ripple,="" [`${prefixcls}--${color}`]:="" !!color,="" [`${prefixcls}--${variant}`]:="" !!variant,="" [`${prefixcls}--disabled`]:="" disabled,="" },="" )}="" disabled="{disabled}" onclick="{this.onClick}" onmousedown="{this.onClickDown}" ontouchstart="{this.onClickDown}" href="{href}">
+            <ComponentProp
+                className={classNames(
+                    `${prefixCls}`,
+                    {
+                        'cine-ripple': ripple,
+                        [`${prefixCls}--${color}`]: !!color,
+                        [`${prefixCls}--${variant}`]: !!variant,
+                        [`${prefixCls}--disabled`]: disabled,
+                    },
+                    className
+                )}
+                disabled={disabled}
+                onClick={this.onClick}
+                onMouseDown={this.onClickDown}
+                onTouchStart={this.onClickDown}
+                href={href}>
                 {children}
-                {ripple && <span classname="cine-ripple__circle">}
-            </span></componentprop>
+                {ripple && <span className="cine-ripple__circle" />}
+            </ComponentProp>
         );
     }
 }
