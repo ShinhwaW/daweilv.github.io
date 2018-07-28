@@ -2,7 +2,8 @@
 <a id="more"></a>
 <p>拿到那个页面，在 MacOS Chrome 下模拟了 iPhone7 的设备，发现横竖屏都是正常的。又在自己的手机上测了一下，果然重现了。如下图：</p>
 <p><img src="example.png" alt="example.png"></p>
-<p>因为这个页面是响应式页面，对手机横版做了适配，笔者猜测可能是对应的样式没应用上。但转念一想，不对啊，就算是样式没应用上，也应该是整个列表都有问题，不可能就那一个 item 字体有问题。在调试了几次样式无果后，笔者猜测是 webkit 对字体在某种情况下的“人性化智能”缩放导致，类似桌面端的 Chrome 对 12px 以下字体的限制，具体是什么原因导致的不知道。Google 一番发现有个属性很可能是导致这个 bug 原因：<code>text-size-adjust</code>。</p>
+<p>因为这个页面是响应式页面，对手机横版做了适配，笔者猜测可能是对应的样式没应用上。但转念一想，不对啊，就算是样式没应用上，也应该是整个列表都有问题，不可能就那一个 item 字体有问题。</p>
+<p>在调试了几次样式无果后，笔者猜测是 webkit 对字体在某种情况下的“人性化智能”缩放导致，类似桌面端的 Chrome 对 12px 以下字体的限制，具体是什么原因导致的不知道。Google 一番发现有个属性很可能是导致这个 bug 原因：<code>text-size-adjust</code>。</p>
 <p>引用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-size-adjust" target="_blank" rel="noopener">MDN</a> 上对 <code>text-size-adjust</code> 的解释：</p>
 <blockquote>
 <p>text-size-adjust 属性 允许我们控制将文本溢出算法应用到一些手机设备上。这个属性还没有写进标准，使用时必须加上前缀：-moz-text-size-adjust，-webkit-text-size-adjust,，和 -ms-text-size-adjust。</p>
@@ -38,7 +39,7 @@
 <li><a href="https://segmentfault.com/q/1010000002513103" target="_blank" rel="noopener">text-size-adjust: 100% 有什么作用？</a></li>
 <li><a href="http://yisibl.github.io/share/css-workflow.html#/22" target="_blank" rel="noopener">《CSS 工作流》</a></li>
 </ul>
-</div></article></div></main><footer><div class="paginator"><a href="/2018/07/21/教练我想写一个-helloworld-Babel-插件/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
+</div></article></div></main><footer><div class="paginator"><a href="/2018/07/21/教练我想写一个-helloworld-Babel-插件/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'lnyx';
 var disqus_identifier = '2018/07/28/text-size-adjust-bug-分析/';
 var disqus_title = 'text-size-adjust bug 分析';
 var disqus_url = 'http://dawei.lv/2018/07/28/text-size-adjust-bug-分析/';
