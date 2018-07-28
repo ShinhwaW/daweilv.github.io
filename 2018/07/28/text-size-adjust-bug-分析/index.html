@@ -25,7 +25,8 @@
 <p>修复的方法：</p>
 <ol>
 <li>设置一个比 viewport 窄的固定值；</li>
-<li>在外层样式上应用 <code>text-size-adjust:none</code> 或 <code>text-size-adjust:100%</code> ，<a href="https://drafts.csswg.org/css-size-adjust/#propdef-text-size-adjust" target="_blank" rel="noopener">两种设置等效</a>，没有用 autoprefix 的同学记得加上厂商前缀，经测试，不带 <code>-webkit</code> 前缀的 <code>text-size-adjust:none</code> 是无效的。</li>
+<li>在外层样式上应用 <code>text-size-adjust:none</code> 或 <code>text-size-adjust:100%</code> ，<a href="https://drafts.csswg.org/css-size-adjust/#propdef-text-size-adjust" target="_blank" rel="noopener">两种设置等效</a>，没有用 autoprefix 的同学记得加上厂商前缀，经测试，不带 <code>-webkit</code> 前缀的 <code>text-size-adjust:none</code> 是无效的。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">-ms-text-size-adjust</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">-webkit-text-size-adjust</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">text-size-adjust</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <p>另外，<code>text-size-adjust</code> 在 iPhone 上默认值为 <code>auto</code>，iPad 上的默认值为 <code>none</code>，所以 iPad 并不会出现该 bug。</p>
 <p>参考：</p>
