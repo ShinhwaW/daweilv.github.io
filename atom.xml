@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dawei.lv/"/>
-  <updated>2018-07-28T08:19:05.821Z</updated>
+  <updated>2018-07-28T08:22:38.975Z</updated>
   <id>http://dawei.lv/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://dawei.lv/2018/07/28/text-size-adjust-bug-%E5%88%86%E6%9E%90/"/>
     <id>http://dawei.lv/2018/07/28/text-size-adjust-bug-分析/</id>
     <published>2018-07-28T07:41:46.000Z</published>
-    <updated>2018-07-28T08:19:05.821Z</updated>
+    <updated>2018-07-28T08:22:38.975Z</updated>
     
-    <content type="html"><![CDATA[<p>某日，同事 J 说发现一个奇怪的现象：一个列表页，在 iPhone7 竖屏上字体大小正常，横屏的时候有些字体就变的特别大。本文便是笔者对这一 “bug” 的分析过程。</p><a id="more"></a><p>拿到那个页面，在 MacOS Chrome 下模拟了 iPhone7 的设备，发现横竖屏都是正常的。又在自己的手机上测了一下，果然重现了。如下图。</p><p><img src="example.png" alt="example.png"></p><p>因为这个页面是响应式页面，对手机横版做了适配，笔者猜猜可能是对应的样式没应用上。但转念一想，不对啊，就算是样式没应用上，也不可能就那一个 item 字体有问题。在调试了几次样式无果后，当时笔者猜测是 webkit 对字体在某种情况下的缩放导致，类似桌面端的 Chrome 对 12px 以下字体的限制，具体是什么原因导致的不知道。Google 一番发现有个属性很可能是导致这个 bug 原因：<code>text-size-adjust</code>。</p><p>引用 MDN 上对该属性的解释：</p><blockquote><p>text-size-adjust 属性 允许我们控制将文本溢出算法应用到一些手机设备上。这个属性还没有写进标准，使用时必须加上前缀：-moz-text-size-adjust，-webkit-text-size-adjust,，和 -ms-text-size-adjust。</p><p>因为缩放适配小屏幕而导致文字会变得很小，许多手机浏览器会使用文本溢出算法让文本变大而更易读。当一个包含文本的元素宽度用了 100%，他的文本大小会增加直到达到一个易读的大小，但是不会修改布局。</p></blockquote><p>笔者尝试在 item 容器样式上加了一个 <code>-webkit-text-size-adjust:none</code>，发现样式正常了。</p><p>到底是什么情况下 <code>text-size-adjust</code> 会自动调整呢？笔者写了几个例子，来还原这 bug，注意使用 iPhone 打开，并观察横竖屏：</p><ul><li>正常的列表，<a href="/demo/text-size-adjust/normal.html">点击查看</a></li><li>异常的列表，<a href="/demo/text-size-adjust/bug.html">点击查看</a></li><li>出现异常并被修复的列表，<a href="/demo/text-size-adjust/fixed.html">点击查看</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>某日，同事 J 说发现一个奇怪的现象：一个列表页，在 iPhone7 竖屏上字体大小正常，横屏的时候有些字体就变的特别大。本文便是笔者对这一 “bug” 的分析过程。</p><a id="more"></a><p>拿到那个页面，在 MacOS Chrome 下模拟了 iPhone7 的设备，发现横竖屏都是正常的。又在自己的手机上测了一下，果然重现了。如下图：</p><p><img src="example.png" alt="example.png"></p><p>因为这个页面是响应式页面，对手机横版做了适配，笔者猜测可能是对应的样式没应用上。但转念一想，不对啊，就算是样式没应用上，也应该是整个列表都有问题，不可能就那一个 item 字体有问题。在调试了几次样式无果后，笔者猜测是 webkit 对字体在某种情况下的“人性化智能”缩放导致，类似桌面端的 Chrome 对 12px 以下字体的限制，具体是什么原因导致的不知道。Google 一番发现有个属性很可能是导致这个 bug 原因：<code>text-size-adjust</code>。</p><p>引用 MDN 上对 <code>text-size-adjust</code> 的解释：</p><blockquote><p>text-size-adjust 属性 允许我们控制将文本溢出算法应用到一些手机设备上。这个属性还没有写进标准，使用时必须加上前缀：-moz-text-size-adjust，-webkit-text-size-adjust,，和 -ms-text-size-adjust。</p><p>因为缩放适配小屏幕而导致文字会变得很小，许多手机浏览器会使用文本溢出算法让文本变大而更易读。当一个包含文本的元素宽度用了 100%，他的文本大小会增加直到达到一个易读的大小，但是不会修改布局。</p></blockquote><p>笔者尝试在 item 容器样式上加了一个 <code>-webkit-text-size-adjust:none</code>，发现样式正常了。</p><p>到底是什么情况下 <code>text-size-adjust</code> 会自动调整呢？笔者写了几个例子，来还原这 bug，注意使用 iPhone 打开，并观察横竖屏：</p><ul><li>正常的列表，<a href="/demo/text-size-adjust/normal.html">点击查看</a></li><li>异常的列表，<a href="/demo/text-size-adjust/bug.html">点击查看</a></li><li>出现异常并被修复的列表，<a href="/demo/text-size-adjust/fixed.html">点击查看</a></li></ul>]]></content>
     
     <summary type="html">
     
