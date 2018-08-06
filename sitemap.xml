@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dawei.lv/resume/index.html</loc>
+    
+    <lastmod>2018-08-06T15:22:43.450Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dawei.lv/2017/07/01/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E6%8B%BE%E9%81%97%E4%B9%8Bjavascript%E7%AF%87/</loc>
     
     <lastmod>2018-08-06T15:12:32.987Z</lastmod>
@@ -86,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://dawei.lv/2018/06/27/Progressive-Web-App-%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/</loc>
-    
-    <lastmod>2018-06-27T03:51:57.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://dawei.lv/2018/06/22/%E4%B8%BA%E4%BD%A0%E7%9A%84%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-ECS-%E5%8D%87%E7%BA%A7-https/</loc>
     
     <lastmod>2018-06-27T02:05:50.000Z</lastmod>
@@ -156,21 +156,14 @@
   </url>
   
   <url>
+    <loc>http://dawei.lv/2016/07/19/bash-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</loc>
+    
+    <lastmod>2018-05-30T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dawei.lv/2017/05/04/%E5%9C%A8-Terminal-%E4%B8%AD%E6%89%93%E5%BC%80-Sublime/</loc>
-    
-    <lastmod>2018-05-30T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dawei.lv/2016/12/09/javascript-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</loc>
-    
-    <lastmod>2018-05-30T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dawei.lv/2016/12/09/Terminal-%E8%AE%BE%E7%BD%AE-path%E3%80%81alias/</loc>
     
     <lastmod>2018-05-30T06:07:19.000Z</lastmod>
     
@@ -191,7 +184,14 @@
   </url>
   
   <url>
-    <loc>http://dawei.lv/2016/07/19/bash-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</loc>
+    <loc>http://dawei.lv/2016/12/09/Terminal-%E8%AE%BE%E7%BD%AE-path%E3%80%81alias/</loc>
+    
+    <lastmod>2018-05-30T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dawei.lv/2016/12/09/javascript-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</loc>
     
     <lastmod>2018-05-30T06:07:19.000Z</lastmod>
     
